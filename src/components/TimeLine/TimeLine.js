@@ -44,9 +44,10 @@ const Timeline = () => {
 
   return (
     <Section id="about">
-      <SectionTitle>About Me</SectionTitle>
+      <SectionTitle>Our Testing Methodology
+</SectionTitle>
       <SectionText>
-      The purpose of JavaScript Mastery is to help aspiring and established developers to take their development skills to the next level and build awesome apps.
+      Our security testing services are based on a systematic approach to vulnerability identification and reporting. Our advanced methodology includes:
       </SectionText>
       <CarouselContainer ref={carouselRef} onScroll={handleScroll}>
         <>

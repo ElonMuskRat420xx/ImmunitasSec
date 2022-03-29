@@ -9,28 +9,36 @@ export const Img = styled.img`
 
 export const GridContainer = styled.section`
 display: grid;
-grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 padding: 3rem;
-place-items: center;
-column-gap: 2rem;
-row-gap: 3rem;
+column-gap: 0rem;
+row-gap: 7rem;
 @media ${(props) => props.theme.breakpoints.sm} {
   display: flex;
   flex-direction: column;
   padding: 2rem;
-  padding-bottom: 0;
+  padding-bottom: 5;
 }
 
 `
 export const BlogCard = styled.div`
   border-radius: 10px;
-  box-shadow: 3px 3px 20px rgba(80, 78, 78, 0.5);
+  box-shadow: 2px 2px 20px #212D45 ;
   text-align: center;
   width: 400px;
   @media ${(props) => props.theme.breakpoints.sm} {
     width: 100%;
   }
 `;
+
+export const name = styled.div`
+  
+
+
+`;
+
+
+
 export const TitleContent = styled.div`
   text-align: center;
   z-index: 20;
@@ -40,19 +48,28 @@ export const TitleContent = styled.div`
 
 
 export const HeaderThree = styled.h3`
-  font-weight: 500;
-  letter-spacing: 2px;
+  font-weight: 600;
   color: #9cc9e3;
-  padding: .5rem 0;
-  font-size: ${(props) => props.title ? '3rem' : '2rem'};
+  padding: 2.5rem 0;
+  font-size: ${(props) => props.title ? '1.9rem' : '1.5rem'};
+  text-align:left;
+  padding-left:35px;
+
+  @media ${(props) => props.theme.breakpoints.sm} {
+    padding-left:2rem;
+  }
+
+
 `;
 
 export const Hr = styled.hr`
-  width: 50px;
-  height: 3px;
-  margin: 20px auto;
-  border: 0;
-  background: #d0bb57;
+    width: 50px;
+    height: 3px;
+    margin-left: 50px;
+    margin-bottom: 10px;
+    margin-top: -1.5rem;
+    border: 0;
+    background: #d0bb57;
 `;
 
 export const Intro = styled.div`
@@ -68,13 +85,14 @@ export const Intro = styled.div`
 
 export const CardInfo = styled.p`
   width: 100%;
+  height:140px;
   padding: 0 50px;
   color: #e4e6e7;
   font-style: 2rem;
   line-height: 24px;
-  text-align: justify;
+  text-align: left;
   @media ${(props) => props.theme.breakpoints.sm} {
-    padding:.3rem
+    padding:2.0rem
   
 }
 `;
@@ -82,21 +100,32 @@ export const CardInfo = styled.p`
 
 export const UtilityList = styled.ul`
   list-style-type: none;
-  padding: 0;
+  padding: 15px;
   display: flex;
   justify-content: space-around;
   margin: 2.5rem 0;
 `;
 
 export const ExternalLinks = styled.a`
-color:#d4c0c0;
+font-weight:bold;
+border: none;
+border-radius: 10px;
+display:flex;
+color:#ffff;
 font-size: 1.6rem;
 padding:1rem 1.5rem;
-background: #6b3030;
-border-radius: 15px;
+background: ${({ alt }) => alt ? 'linear-gradient(270deg, #0F1624 0%, #0F1624 100%)' : 'linear-gradient(270deg, #0F1624 0%, #0F1624 100%)'};
 transition: 0.5s;
+
+
+@media ${(props) => props.theme.breakpoints.sm} {
+  margin-top:1.25rem;
+  }
+
+
 &:hover{
-  background: #801414;
+  color: #ffff;
+  background: #212D45;
 
 }
 `;

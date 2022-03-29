@@ -131,3 +131,26 @@ export const ListIcon = styled.img`
     margin-bottom: 0px;
   }
 `
+
+export const ListIcon2 = styled.li`
+  display:inline-grid;;
+  width: 30px;
+  height: 30px;
+  margin-bottom: 10px;
+  padding:10px;
+
+  @media ${props => props.theme.breakpoints.md}{
+    width: 30px;
+    height: 30px;
+    margin-bottom: 4px;
+    padding:10px;
+  }
+
+  @media ${props => props.theme.breakpoints.sm}{
+    width: 30px;
+    height: 30px;
+    margin-bottom: 0px;
+    padding: 10px
+  }
+`
+

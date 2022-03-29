@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 1fr;
   grid-column-gap: 2rem;
   padding: 1rem;
@@ -22,8 +22,24 @@ export const Div1 = styled.div`
   display: flex;
   flex-direction: row;
   align-content: center;
+  padding-bottom:1rem;
+
+
+  &:hover {
+
+   
+    transform: scale(1.05);
+    cursor: pointer;
+    opacity: 0.5;
+    border-radius:10px;
+    
+  }
+
+  
   @media ${(props) => props.theme.breakpoints.sm} {
     grid-area: 1 / 1 / 2 / 3;
+    
+  
   }
 `;
 export const Div2 = styled.div`
@@ -32,6 +48,11 @@ export const Div2 = styled.div`
   justify-content: space-around;
   @media ${(props) => props.theme.breakpoints.sm} {
     grid-area: 2 / 2 / 3 / 5;
+    padding-left:0rem;
+  }
+  @media ${(props) => props.theme.breakpoints.md} {
+    grid-area: 2 / 2 / 3 / 5;
+    padding-left:2rem;
   }
 `;
 export const Div3 = styled.div`
@@ -47,19 +68,42 @@ export const Div3 = styled.div`
 
 // Navigation Links
 export const NavLink = styled.a`
-  font-size: 2rem;
+  font-size: 2.0rem;
   line-height: 32px;
   color: rgba(255, 255, 255, 0.75);
   transition: 0.4s ease;
+  padding-inline:1rem;z
+  &:hover {
+    color: #fff;
+    opacity: 0.2;
+    cursor: pointer;
+  }
+  @media ${(props) => props.theme.breakpoints.sm} {
+    padding: 0.2rem;
+    margin-inline:1.25rem;
+    font-size:1.5rem;
+   
+  }
+`;
+
+export const NavLinkService = styled.a`
+  font-size: 2.0rem;
+  line-height: 32px;
+  color: rgba(255, 255, 255, 0.75);
+  transition: 0.4s ease;
+  padding-bottom:10px;
   &:hover {
     color: #fff;
     opacity: 1;
     cursor: pointer;
   }
   @media ${(props) => props.theme.breakpoints.sm} {
-    padding: 0.5rem;
+    padding: 0.2rem;
+    margin-inline:1.25rem;
+    font-size:1.5rem;
   }
 `;
+
 
 /// DropDown Contact
 export const ContactDropDown = styled.button`
@@ -67,7 +111,7 @@ export const ContactDropDown = styled.button`
   display: flex;
   position: relative;
   background: none;
-  font-size: 1.7rem;
+  font-size: 1.2rem;
 
   line-height: 32px;
   color: rgba(255, 255, 255, 0.75);
@@ -122,3 +166,5 @@ border-radius: 50px;
     
   }
 `
+
+

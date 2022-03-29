@@ -25,15 +25,15 @@ export const Boxes = styled.div`
 export const Box = styled.div`
   background: #212D45;
   border-radius: 12px;
-  height: 144px;
+  height: 100%;
   padding: 24px;
   @media ${props => props.theme.breakpoints.lg} {
-    height: 210px;
+    height: 100%;
 
   }
 
   @media ${props => props.theme.breakpoints.md} {
-    height: 135px;
+    height: 100%;
     padding: 16px;
   }
 
@@ -130,5 +130,35 @@ export const IconContainer = styled.div`
   @media ${props => props.theme.breakpoints.sm}{
     width: 160px;
     justify-content: space-between;
+  }
+`
+
+
+
+export const Box2 = styled.div`
+  
+  height: 200px;
+  width:350px;
+  padding: 0px;
+
+  
+  @media ${props => props.theme.breakpoints.lg} {
+    height: 200px;
+    width:350px;
+
+  }
+
+  @media ${props => props.theme.breakpoints.md} {
+    height: 135px;
+    padding: 5px;
+  }
+
+  @media ${props => props.theme.breakpoints.sm} {
+    height: 125px;
+    padding: 5px;
+    
+    &:nth-child(2n){
+      grid-row:2;
+    }
   }
 `
