@@ -38,7 +38,7 @@ function Services(props) {
 		  </div>
 
   <ImageHero>
-  <img width="450" height="450" src="https://dkkit.rometheme.pro/securs/wp-content/uploads/sites/13/2021/07/illustration-21.png" />												
+  <img width="450" height="450" src="" alt="hero image" />											
   </ImageHero>	
   </HeroRow>
 
