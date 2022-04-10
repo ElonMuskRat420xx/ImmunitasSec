@@ -2,12 +2,11 @@
 import Link from 'next/link';
 import React from 'react';
 import { Container, Div1, Div2, Div3, NavLink, SocialIcons } from './HeaderStyles';
-import { MenuResources } from './MenuResources';
-import { MenuServices } from './MenuServices';
-import { MenuAbout } from './MenuAbout';
-
+// import { MenuResources } from './NavBar/MenuResources';
+// import { MenuServices } from './NavBar/MenuServices';
 import { AiFillEnvironment, AiFillHome, AiFillMessage  } from 'react-icons/ai';
 import { DiCssdeck } from 'react-icons/di';
+// import Navbar from './NavBar/NavBar';
 
 
 const Header = (props) =>  (
@@ -24,33 +23,30 @@ const Header = (props) =>  (
     <Div2>
       
     <li> 
-    <MenuServices>
-
-    </MenuServices>  
+    {/* <MenuServices />   */}
+    <Div1>
+    <NavLink>
+    <Link href="/Services">Services</Link>
+    </NavLink>
+    </Div1>
     </li>
 
     <li>
-    <MenuResources>
-
-    </MenuResources>   
+    {/* <MenuResources />        */}
+    <Div1>
+    <NavLink>
+    <Link href="/Resources">Resources</Link>
+    </NavLink>
+    </Div1>
     </li>        
       
     <li>
- 
-
     <Div1>
-<NavLink>
-  
-  
-  <Link href="/About">About</Link>
-  
-  
-  </NavLink>
+    <NavLink>
+    <Link href="/About">About</Link>
+    </NavLink>
     </Div1>
-    
     </li>      
-
-     
       
     </Div2>
       <Div3>

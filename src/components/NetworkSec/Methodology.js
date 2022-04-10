@@ -1,6 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { CarouselButton, CarouselButtonDot, CarouselButtons, CarouselContainer, CarouselItem, CarouselItemImg, CarouselItemText, CarouselItemTitle, CarouselMobileScrollNode } from '../TimeLine/TimeLineStyles';
-import { Section, SectionDivider, SectionText, SectionTitle } from '../../styles/GlobalComponents';
+import { Section, SectionText } from '../../styles/GlobalComponents';
 import { StepHeading } from '../../constants/NetworkSecConstants';
 import styled from 'styled-components'
 
@@ -12,7 +11,7 @@ const data = [
     { text1: '.05 Reporting', text2: 'Once a network assessment is complete, our testers document key findings and supply prioritised remediation guidance to help address any identified exposures.', },
 
   ];
-
+  
 const TOTAL_CAROUSEL_COUNT = StepHeading.length;
 
 const TestingApproach = () => {
@@ -41,8 +40,6 @@ const TestingApproach = () => {
     }
   }
 
-  // snap back to beginning of scroll when window is resized
-  // avoids a bug where content is covered up if coming from smaller screen
   useEffect(() => {
     const handleResize = () => {
       scroll(carouselRef.current, 0);
@@ -53,9 +50,8 @@ const TestingApproach = () => {
 
   return (
 
-
     <Section>
-      
+    
       <ApproachTitle>Our Approach To Network Testing
       </ApproachTitle>
 
@@ -63,9 +59,7 @@ const TestingApproach = () => {
       An Immunitas network test follows a tried and tested methodology to identify, exploit and help address vulnerabilities. Here’s how we approach an external network assessment:
       </SectionText>
    
-
-
-      <ApproachBoxes>
+    <ApproachBoxes>
       {data.map((card, index) => (
         <ApproachBox key={index}>
           <ApproachBoxNum>{`${card.text1}`}</ApproachBoxNum>
@@ -74,8 +68,6 @@ const TestingApproach = () => {
       ))}
     </ApproachBoxes>
 
-
-
    </Section>
 
     
@@ -83,10 +75,6 @@ const TestingApproach = () => {
 };
 
 export default TestingApproach;
-
-
-
-//Title Styled Components
   
 const PageTitle = styled.h2`
 font-weight: 800;
@@ -116,8 +104,6 @@ padding: ${(props) => props.main ? '58px 0 16px' : '0'};
 }
 
 `
-
-
 const ApproachTitle = styled.h2`
 font-weight: 800;
 font-size: ${(props) => props.main ? '55px' : '46px'};
@@ -142,39 +128,6 @@ margin-left:20%;
   
 }
 `
-
-
-const PageSubTitle = styled.h2`
-font-weight: 800;
-font-size: ${(props) => props.main ? '42px' : '24px'};
-line-height: ${(props) => props.main ? '32px' : '32px'};
-width: max-content;
-max-width: 100%;
-
-margin-bottom: 2rem;
-padding: ${(props) => props.main ? '58px 0 16px' : '0'};
-
-@media ${props => props.theme.breakpoints.md}{
-  font-size: ${(props) => props.main ? '24px' : '18px'};
-  line-height: ${(props) => props.main ? '32px' : '32px'};
-  margin-bottom: 12px;
-  padding: ${(props) => props.main ? '40px 0 12px' : '0'};
-}
-
-@media ${props => props.theme.breakpoints.sm}{
-  font-size: 24px;
-  line-height: 40px;
-  font-size: ${(props) => props.main ? '28px' : '24px'};
-  line-height: ${(props) => props.main ? '32px' : '32px'};
-  margin-bottom: 8px;
-  padding: ${(props) => props.main ? '16px 0 8px' : '0'};
-  max-width: 100%;
-}
-`
-
-
-//Methodology Section Styled Components
-
 const ApproachBoxes = styled.div`
   width: 100%;
   display: grid;
@@ -195,7 +148,6 @@ const ApproachBoxes = styled.div`
     margin: 5px auto;
   }
 `
-
 const ApproachBox = styled.div`
   background: #212D45;
   border-radius: 12px;
@@ -256,82 +208,5 @@ const ApproachBoxText = styled.p`
   @media ${props => props.theme.breakpoints.sm} {
     font-size: 10px;
     line-height: 14px;
-  }
-`
-
-const ApproachJoin = styled.div`
-  display: flex;
-  max-width: 1040px;
-  justify-content: center;
-  align-items: center;
-  padding-bottom: 80px;
-
-  @media ${props => props.theme.breakpoints.md}{
-    display: flex;
-    justify-content: center;
-    padding-bottom: 64px;
-  }
-
-  @media ${props => props.theme.breakpoints.sm}{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 32px;
-  }
-`
-
-const ApproachJoinText = styled.h5`
-  display: flex;
-  font-size: 24px;
-  line-height: 40px;
-  letter-spacing: 0.02em;
-  color: rgba(255, 255, 255, 0.5);
-
-@media ${props => props.theme.breakpoints.md}{
-  line-height: 32px;
-  font-size: 20px;
-};
-
-@media ${props => props.theme.breakpoints.sm}{
-  font-size: 16px;
-  line-height: 24px;
-  margin: 0 0 16px;
-}
-`
-
-export const IconContainer = styled.div`
-  display: flex;
-
-  @media ${props => props.theme.breakpoints.sm}{
-    width: 160px;
-    justify-content: space-between;
-  }
-`
-
-const ApproachBox2 = styled.div`
-  
-  height: 200px;
-  width:350px;
-  padding: 0px;
-
-  
-  @media ${props => props.theme.breakpoints.lg} {
-    height: 200px;
-    width:350px;
-
-  }
-
-  @media ${props => props.theme.breakpoints.md} {
-    height: 135px;
-    padding: 5px;
-  }
-
-  @media ${props => props.theme.breakpoints.sm} {
-    height: 125px;
-    padding: 5px;
-    
-    &:nth-child(2n){
-      grid-row:2;
-    }
   }
 `

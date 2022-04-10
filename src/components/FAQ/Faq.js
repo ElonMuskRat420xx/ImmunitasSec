@@ -1,120 +1,82 @@
-import React from 'react';
+import {React} from 'react';
 import styled from 'styled-components';
-import {SectionTitle, SectionText, Section} from '../../styles/GlobalComponents/index';
-import Accordion from "./AccordionFAQ";
+import { Section, SectionSubTitle, SectionDivider, SectionTitle } from '../../styles/GlobalComponents';
+import SearchBar from './Search';
+import GeneralQuestions from './Accordions/General.js';
+import DeliverableQuestions from './Accordions/Deliverables';
+import ScopingQuestions from './Accordions/Scoping';
 
+import FAQData from "./Data/MainData.json";
+import Link from 'next/link';
 
+const data = [
+  { text1: '.01 ', text2: 'Redscan’s network and infrastructure testing experts work with you to define any networks and assets in scope and devise an appropriate assessment strategy.'},
+  { text1: '.02 Reconnaissance & Intelligence Gathering ', text2: 'Our network penetration testers use the latest intelligence gathering techniques to uncover security and technical information that could be used to help them access your network.', },
+  { text1: '.03 Active Scanning & Vulnerability Analaysis', text2: 'Using a combination of manual and automated tools, out testers identify security weaknesses and develop a strategy to exploit them.', },
+  { text1: '.04 Explotation', text2: 'To obtain initial access to your network, our experienced network penetration testers exploit all identified vulnerabilities, but in a safe way that avoids damage and disruption.', },
+  { text1: '.05 Reporting', text2: 'Once a network assessment is complete, our testers document key findings and supply prioritised remediation guidance to help address any identified exposures.', },
 
-
+];
 
 
 function Faq() {
     return (
 
-
-
 <Section>
 
-
 <SectionTitle>
-Immunitas is 100% Dedicated to Cybersecurity
+Frequently Asked Questions
 </SectionTitle>
-<SectionText>
-The name “Vumetric” comes from a combination of the words “Vulnerability” and “Metric”, the foundation of what we aim to provide, as we help our clients identify and prioritize their vulnerabilities and risks. Vumetric is a global provider of ISO9001:2015 certified penetration testing and cybersecurity services.
-</SectionText>
 
-<section class="after:bg-jacarta-900/60 relative bg-cover bg-center bg-no-repeat py-10 after:absolute after:inset-0">
-        <div class="container relative z-10">
-          <h1 class="font-display mb-10 text-center text-[25px] font-medium text-white">How can we help?</h1>
-          <form action="search" class="relative mx-auto block max-w-md">
-            <input type="search" class="text-black placeholder-jacarta-500     focus:outline-none focus:border-[#212D45] focus:ring-1 focus:ring-[#212D45]
- border-jacarta-100 w-full rounded-2xl border py-[0.6875rem] px-4 pl-10" placeholder="Search"/>
-            <span class="absolute left-0 top-0 flex h-full w-12 items-center justify-center rounded-2xl">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" class="fill-jacarta-500 h-4 w-4">
-                <path fill="none" d="M0 0h24v24H0z"></path>
-                <path d="M18.031 16.617l4.283 4.282-1.415 1.415-4.282-4.283A8.96 8.96 0 0 1 11 20c-4.968 0-9-4.032-9-9s4.032-9 9-9 9 4.032 9 9a8.96 8.96 0 0 1-1.969 5.617zm-2.006-.742A6.977 6.977 0 0 0 18 11c0-3.868-3.133-7-7-7-3.868 0-7 3.132-7 7 0 3.867 3.132 7 7 7a6.977 6.977 0 0 0 4.875-1.975l.15-.15z"></path>
-              </svg>
-            </span>
-          </form>
-        </div>
-      </section>
+<HeaderFaqText>
+Do you have more questions?
+<ContactText>
+<Link 
+href="/Contact" >Contact Us
+</Link>
+</ContactText>
+</HeaderFaqText>
 
+<SearchBar placeholder="Search For Answers..." data={FAQData} />
 
+<br/>
 
+<br/>
 
-      <section class="relative py-10">
-     
-      <div class="container">
-        <h2 class="font-display text-jacarta-700 mb-10 text-center text-[25px] font-medium dark:text-white ">
-          Or browse categories
-        </h2>
+<SectionSubTitle>
+General
+</SectionSubTitle>
 
-        <div class="mb-15 grid grid-cols-1 gap-x-8 gap-y-8 sm:grid-cols-2 md:grid-cols-4 place-items-center">
-          <a href="#" class="block p-6 max-w-sm bg-[#212D45] rounded-lg shadow-md hover:bg-[#0F1624]">
-            <h3 class="font-display text-jacarta-700 mb-2 text-base font-semibold dark:text-white">
-              Getting started
-            </h3>
-            <p class="dark:text-jacarta-300">
-              Learn how to create an account, set up your wallet, and what you can do.
-            </p>
-          </a>
-          <a href="#" class="block p-6 max-w-sm bg-[#212D45] rounded-lg shadow-md hover:bg-[#0F1624]">
-            <h3 class="font-display text-jacarta-700 mb-2 text-base font-semibold dark:text-white">Buying</h3>
-            <p class="dark:text-jacarta-300">
-              Learn how to create an account, set up your wallet, and what you can do.
-            </p>
-          </a>
-          <a href="#" class="block p-6 max-w-sm bg-[#212D45] rounded-lg shadow-md hover:bg-[#0F1624]">
-            <h3 class="font-display text-jacarta-700 mb-2 text-base font-semibold dark:text-white">Selling</h3>
-            <p class="dark:text-jacarta-300">
-              Learn how to create an account, set up your wallet, and what you can do.
-            </p>
-          </a>
-          <a href="#" class="block p-6 max-w-sm bg-[#212D45] rounded-lg shadow-md hover:bg-[#0F1624]">
-            <h3 class="font-display text-jacarta-700 mb-2 text-base font-semibold dark:text-white">Creating</h3>
-            <p class="dark:text-jacarta-300">
-              Learn how to create an account, set up your wallet, and what you can do.
-            </p>
-          </a>
-          <a href="#" class="block p-6 max-w-sm bg-[#212D45] rounded-lg shadow-md hover:bg-[#0F1624]">
-            <h3 class="font-display text-jacarta-700 mb-2 text-base font-semibold dark:text-white">User Safety</h3>
-            <p class="dark:text-jacarta-300">
-              Learn how to create an account, set up your wallet, and what you can do.
-            </p>
-          </a>
-          <a href="#" class="block p-6 max-w-sm bg-[#212D45] rounded-lg shadow-md hover:bg-[#0F1624]">
-            <h3 class="font-display text-jacarta-700 mb-2 text-base font-semibold dark:text-white">Partners</h3>
-            <p class="dark:text-jacarta-300">
-              Learn how to create an account, set up your wallet, and what you can do.
-            </p>
-          </a>
-        </div>
-      
-        <h2 class="font-display text-jacarta-700 mb-10 my-10 text-center text-[25px] font-medium dark:text-white">
-          Frequently asked questions
-        </h2>
-      
-       
-        <p class="mx-auto mb-10 max-w-[75rem] text-center text-3xl">
-          Join our community now to get free updates and also alot of freebies are waiting for you or
-          <a href="/Contact" class="text-pink-500"> Contact Support</a>
-        </p>
+<GeneralQuestions>
+  
+</GeneralQuestions>
 
-  </div>
+<SectionSubTitle>
+Scoping & Testing
+</SectionSubTitle>
 
 
-<GridContainerFAQ>
-<Accordion questionsAnswers={questionsAnswers} />
-</GridContainerFAQ>
+<ScopingQuestions>
 
-            
-</section>
+</ScopingQuestions>
+
+
+<SectionSubTitle>
+Deliverables & Reporting
+</SectionSubTitle>
+
+<DeliverableQuestions>
+
+</DeliverableQuestions>
+
 </Section>
+
+
+
 )
 } 
 
 export default Faq;
-
 
 
 export const GridContainerFAQ = styled.section`
@@ -131,54 +93,59 @@ align-items: -webkit-center;
 }
 
 `
+const ContactText = styled.p`
+  max-width: 800px;
+  font-size: 24px;
+  line-height: 40px;
+  font-weight: 300;
+  padding-bottom: 1.5rem;
+  color: #9cc9e3;
+  --tw-text-opacity: 1;
+  
+  @media ${(props) => props.theme.breakpoints.md} {
+    max-width: 670px;
+    font-size: 20px;
+    line-height: 32px;
+    padding-bottom: 24px;
+  }
 
-const questionsAnswers = [
-  {
-    question: "What is a penetration test?",
-    answer:
-      "A penetration test is a simulated hacking attempt that identifies opportunities for real hackers to break through your defences and perform various malicious acts. It generally leverages tools used by hackers and various professional methodologies to replicate the steps that modern hackers would take to intrude into your IT systems. A pentest attempts to exploit your vulnerabilities to determine their potential impact, should they be used in a real hacking scenario. They provide a list of vulnerabilities with their respective level of severity, as well as technical recommendations to help your team apply corrective measures and focus on the most critical vulnerabilities."
-      
-  , 
-  },
-  {
-    question: "Why perform a penetration test?",
-    answer:
-      "Penetration tests can be performed with various intentions and help reach various objectives. From meeting third-party requirements, to securing business partnerships, to testing a new feature as part of a development cycle, they can serve several purposes. Here are some of the main reasons to perform a penetration test: Comply with requirements that mandate security testing. (3rd-party, PCI, ISO27001, etc.) Identify vulnerabilities and get a list of prioritized fixes. Protect data and systems from attackers. Get the perspective of a hacker. Prevent financial losses",
+  @media ${(props) => props.theme.breakpoints.sm} {
+    font-size: 16px;
+    line-height: 24px;
+    padding-bottom: 16px;
+  }
+`
+const HeaderFaqText = styled.p`
+  max-width: 800px;
+  font-size: 24px;
+  line-height: 40px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.5);
 
-      
-  },
-  {
-    question: "How much does a penetration test cost?",
-    answer: `Click “Forgot password” from the login page or “Change password” from your profile page. A reset link will be emailed to you.`,
-  },
-  {
-    question: "When should I conduct a penetration test?",
-    answer: `Yes! Send us a message and we’ll process your request no questions asked.`,
-  },
-  {
-    question: "How long does a penetration testing project generally last?",
-    answer: `Chat and email support is available 24/7. Phone lines are open during normal business hours.`,
+  @media ${(props) => props.theme.breakpoints.md} {
+    max-width: 670px;
+    font-size: 20px;
+    line-height: 32px;
+  }
 
-  },
-
-  {
-    question: "What is the difference between a pentest and a vulnerability scan?",
-    answer: `Chat and email support is available 24/7. Phone lines are open during normal business hours.`,
-
-  },
-
-  {
-    question: "What is the difference between automated and manual pentests?",
-    answer: `Chat and email support is available 24/7. Phone lines are open during normal business hours.`,
-
-  },
-
-
-  {
-    question: "What are the best penetration testing methodologies and standards?",
-    answer: `Chat and email support is available 24/7. Phone lines are open during normal business hours.`,
-
-  },
+  @media ${(props) => props.theme.breakpoints.sm} {
+    font-size: 16px;
+    line-height: 24px;
+  }
+`
 
 
-];
+export const FaqGridContainer = styled.section`
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+padding: 3rem;
+column-gap: 0rem;
+row-gap: 7rem;
+@media ${(props) => props.theme.breakpoints.sm} {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  padding-bottom: 5;
+}
+
+`
