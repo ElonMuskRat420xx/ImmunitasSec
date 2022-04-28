@@ -133,8 +133,6 @@ export const IconContainer = styled.div`
   }
 `
 
-
-
 export const Box2 = styled.div`
   
   height: 200px;

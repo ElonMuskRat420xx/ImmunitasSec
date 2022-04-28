@@ -10,7 +10,7 @@ const Projects = () => (
     <SectionTitle main>Our Services</SectionTitle>
     <SectionText>
     Our solutions are customized to meet your needs and requirements. When you’re ready to secure your organization, choose us as your partner.
-        </SectionText>
+    </SectionText>
     <GridContainer>
       {projects.map((p, i) => {
         return (

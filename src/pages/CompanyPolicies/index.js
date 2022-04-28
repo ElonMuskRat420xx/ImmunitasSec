@@ -1,17 +1,15 @@
 import Theme from '../../styles/theme';
 import { Layout } from '../../layout/Layout';
-import Resources from '../../components/Resources/Resources';
+import CompanyPolicies from '../../components/T&CS/CompanyPolicies';
 import Footer from '../../components/Footer/Footer'
 
-
-  export default function ResourcePage ({ Component, pageProps }) {
+  export default function CompanyPolicy ({ Component, pageProps }) {
     return (
       <>
         <Theme>
 <Layout>
 
-
-<Resources/>
+<CompanyPolicies/>
 
 <Footer/>
 

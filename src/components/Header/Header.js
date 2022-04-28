@@ -2,11 +2,8 @@
 import Link from 'next/link';
 import React from 'react';
 import { Container, Div1, Div2, Div3, NavLink, SocialIcons } from './HeaderStyles';
-// import { MenuResources } from './NavBar/MenuResources';
-// import { MenuServices } from './NavBar/MenuServices';
 import { AiFillEnvironment, AiFillHome, AiFillMessage  } from 'react-icons/ai';
 import { DiCssdeck } from 'react-icons/di';
-// import Navbar from './NavBar/NavBar';
 
 
 const Header = (props) =>  (
@@ -23,7 +20,6 @@ const Header = (props) =>  (
     <Div2>
       
     <li> 
-    {/* <MenuServices />   */}
     <Div1>
     <NavLink>
     <Link href="/Services">Services</Link>
@@ -32,7 +28,6 @@ const Header = (props) =>  (
     </li>
 
     <li>
-    {/* <MenuResources />        */}
     <Div1>
     <NavLink>
     <Link href="/Resources">Resources</Link>
@@ -49,16 +44,27 @@ const Header = (props) =>  (
     </li>      
       
     </Div2>
+
       <Div3>
-        <SocialIcons href="/">
+
+        <Link href="/"> 
+        <SocialIcons>
           <AiFillHome size="2.2rem" />
         </SocialIcons>
-        <SocialIcons href="/Contact">
+        </Link>
+
+        <Link href="/Contact"> 
+        <SocialIcons>
           <AiFillMessage size="2.2rem" />
         </SocialIcons>
-        <SocialIcons href="/About">
-          <AiFillEnvironment size="2.2rem"/>
+        </Link>
+
+        <Link href="/About"> 
+        <SocialIcons>
+          <AiFillEnvironment size="2.2rem" />
         </SocialIcons>
+        </Link>
+
       </Div3>
 
 </Container>

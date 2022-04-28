@@ -1,10 +1,13 @@
 import React from 'react'
-import styled from 'styled-components';
 import Link from 'next/link';
+import Image from 'next/image';
+import { TopHeroContainer, TopHeroRowReverse, TopRightColumn, TopRightColContent, TopLeftColumn, TopLeftColContent, TopRightColImage, LeftSection, ServiceGrid, ServiceSection } from './ServicesStyle'; 
 import { Section, SectionDivider, SectionSubText, SectionText, SectionTitle } from '../../styles/GlobalComponents';
 import ServiceButton from '../../styles/GlobalComponents/ServiceButton';
 import HeroButton from '../../styles/GlobalComponents/HeroButton';
+import Button from '../../styles/GlobalComponents/Button';
 import {CalloutBanner1, CalloutBanner2, CalloutBanner3, CalloutBanner4, CalloutBanner5 } from './ServiceCards'
+import HeroImage from '../../../public/images/Redscan1.svg'
 
 function Services(props) {
   return (
@@ -13,15 +16,27 @@ function Services(props) {
 <ServiceSection>
 
 <Section>
-<HeroRow>
-  
 
-  <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-ac7d2e5">
-			<div class="elementor-column-wrap elementor-element-populated">
-			
-      <div class="elementor-widget-wrap">
-				
-			  <SectionSubText>
+<TopHeroContainer>
+<TopHeroRowReverse>
+
+<TopRightColumn>
+<TopRightColContent>
+<TopRightColImage>
+<Image
+      src={HeroImage}
+      alt="Card Image"
+      width="1000px"
+      height="1000px"
+
+    />
+</TopRightColImage>
+</TopRightColContent>
+</TopRightColumn>
+
+<TopLeftColumn>
+<TopLeftColContent>
+<SectionSubText>
         We Are Secure
         </SectionSubText>
   
@@ -32,48 +47,37 @@ function Services(props) {
         <SectionText>
         To successfully protect your organisation against cyber threats, it’s imperative to begin by identifying where its security weaknesses lie. 
         </SectionText>
-    
-			</div>
-			</div>
-		  </div>
 
-  <ImageHero>
-  <img width="450" height="450" src="" alt="hero image" />											
-  </ImageHero>	
-  </HeroRow>
+<Link href="/Contact">
 
-  <Link href="/Contact">
+<HeroButton onClick={props.handleClick}>
+  Get A Quote
+</HeroButton>
+</Link>
+</TopLeftColContent>
+</TopLeftColumn>
+</TopHeroRowReverse>
+</TopHeroContainer>
 
-  <HeroButton onClick={props.handleClick}>
-    Get A Quote
-  </HeroButton>
-
-  </Link>
-
-</Section>
 
 <LeftSection>
 <SectionTitle>
-Providing support to uncover and address hidden gaps in your security 
+Providing Support To Uncover & Address Hidden Gaps In Your Security 
 </SectionTitle>
 <SectionText>
-Redscan’s cyber security assessment services are designed to uncover vulnerabilities across your organisation, validate the effectiveness of security controls and processes, and provide the support and advice required to address security risks.
+Our cyber security assessment services are designed to uncover vulnerabilities across your organisation, validate the effectiveness of security controls and processes, and provide the support and advice required to address security risks.
 <br/>
-All our assessments are conducted by professional ethical hackers with the skills and experience to deliver them in line with the most rigorous legal, ethical and technical standards.
+All our assessments are conducted by professional ethical hackers with the skills and experience to deliver them in line with the most rigorous ethical and technical standards.
 </SectionText>
 </LeftSection>
-
 <SectionDivider/>
 
-<br/>
-<br/>
+</Section>
 
+<Section>
 <SectionTitle>
 Cyber Security Assessment Services
 </SectionTitle>
-
-
-<ServiceSection>
 
 <ServiceGrid>
 
@@ -144,139 +148,10 @@ Cyber Security Assessment Services
   </CalloutBanner5> 
 
 </ServiceGrid>
-</ServiceSection>
-
-
+</Section>
 
 </ServiceSection>
+
 )
 }
-
  export default Services;
-
-
-// Service Page Hero Styled Components
-
-const LeftSection = styled.div`
-  width: 75%;
-  @media ${(props) => props.theme.breakpoints.sm} {
-    width: 80%;
-    display: flex;
-    flex-direction: column;
-
-    margin: 0 auto;
-  }
-  @media ${(props) => props.theme.breakpoints.md} {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-
-    margin: 0 auto;
-  }
-`;
-
-const HeroRow = styled.div`
-
-  width: 100%;
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-
-  @media ${(props) => props.theme.breakpoints.sm} {
-    -ms-flex-wrap: wrap;
-		flex-wrap: wrap
-  }
-  @media ${(props) => props.theme.breakpoints.md} {
-    -ms-flex-wrap: wrap;
-		flex-wrap: wrap
-  }
-`;
-
-const ImageHero = styled.div`
-
-display: inline-block;
-text-align: center;
-vertical-align: top;
-width: 100%;
-max-width: 100%;
-margin: 0 auto;
-
-  @media ${(props) => props.theme.breakpoints.sm} {
-    max-width: 90%
-
-  }
-  @media ${(props) => props.theme.breakpoints.md} {
-    max-width: 90%
-
-  }
-`;
-
-//Services Styled Components
-
-const ServiceGrid = styled.section`
-display: grid;
-grid-template-columns: repeat(2,50%);
-grid-template-rows: repeat(1,3);
-grid-column-gap: 42px;
-grid-row-gap: 0px;
-
-@media ${(props) => props.theme.breakpoints.sm} {
-  display: flex;
-  flex-direction: column;
-  padding: 2rem;
-  padding-bottom: 5;
-}
-`
-const ServiceSection = styled.section`
-  display: ${(props) => props.grid ? "grid" : "flex" };
-  flex-direction: ${(props) => props.row ? "row" : "column" };
-  padding: ${(props) => props.nopadding ? "0" : "32px 48px 0" } ;
-  margin: 0 auto;
-  box-sizing: content-box;
-  position: relative;
-  grid-template-columns: 1fr 1fr;
-
-  @media ${(props) => props.theme.breakpoints.md} {
-    padding: 24px 48px 0;
-    flex-direction: column;
-  }
-
-  @media ${(props) => props.theme.breakpoints.sm} {
-    padding: ${(props) => props.nopadding ? "0" : "16px 16px 0" } ;
-
-    width: calc(100vw - 32px);
-    flex-direction: column;
-  }
-  `
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// <SectionText>
-// <FaArrowCircleRight size="1.25rem"/>
-// <Link href="/SmartDevices" >
-// Mobile Application Testing
-// </Link> 
-
-// <FaArrowCircleRight size="1.25rem"/>
-// <Link href="/NetworkSecurity" >
-//   Network Penetration Testing
-// </Link> 
-// </SectionText>

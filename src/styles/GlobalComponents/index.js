@@ -444,8 +444,8 @@ export const HeroButtonBack = styled.div`
   position: relative;
   overflow: hidden;
   opacity: ${({ disabled }) => disabled ? '.5' : '1'};
-  margin-top:-7rem;
-  margin-bottom: 4rem;
+  margin-top:0rem;
+  margin-bottom: 0rem;
 
   @media ${(props) => props.theme.breakpoints.md} {
     width: ${({ alt }) => alt ? '150px' : '184px'};

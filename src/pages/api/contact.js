@@ -1,23 +1,15 @@
 
-
-
-// export default async (req, res) => {
-//   const { name, email, message } = req.body;
-//   console.log(name, email, message);
-// 	return res.status(200).json({ error: "" });
-// }
-
 import nodemailer from "nodemailer";
 
 export default async (req, res) => {
-  const { name, email, message } = req.body;
+  const { firstname, lastname, company, email, message } = req.body;
   const transporter = nodemailer.createTransport({
    
-    host: 'smtp.ethereal.email',
+    host: 'mail.immunitas.uk',
     port: 587,
     auth: {
-        user: 'kieran.gaylord20@ethereal.email',
-        pass: 'K9MKf2u9JRkJeKf1Fu'
+        user: 'contact@immunitas.uk',
+        pass: 'Lesmurdie12%%'
     }
 
 
@@ -37,8 +29,8 @@ export default async (req, res) => {
   try {
     await transporter.sendMail({
       from: email,
-      to: "kieran.gaylord20@ethereal.email",
-      subject: `Contact form submission from ${name}`,
+      to: "contact@immunitas.uk",
+      subject: `Contact form submission from ${firstname} ${lastname} ${company} `,
       html: `<p>You have a contact form submission</p><br>
         <p><strong>Email: </strong> ${email}</p><br>
         <p><strong>Message: </strong> ${message}</p><br>

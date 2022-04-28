@@ -1,14 +1,18 @@
 import { useState } from 'react'
-import LoadingSpinner from './LoadingSpinner'
-import { ErrorMessage, SuccessMessage } from './Message'
+import styled from 'styled-components';
+import {SectionTitle, SectionText } from '../../styles/GlobalComponents';
+import ServiceButton from '../../styles/GlobalComponents/ServiceButton'
 
-const ContactForm = () => {
-	const [form, setForm] = useState(false)
+export default function ContactForm() {
 	const [inputs, setInputs] = useState({
-		name: '',
+		firstname: '',
+		lastname: '',
+		company: '',
 		email: '',
 		message: '',
 	})
+
+	const [form, setForm] = useState('')
 
 	const handleChange = (e) => {
 		setInputs((prev) => ({
@@ -19,7 +23,8 @@ const ContactForm = () => {
 
 	const onSubmitForm = async (e) => {
 		e.preventDefault()
-		if (inputs.name && inputs.email && inputs.message) {
+
+		if (inputs.firstname && inputs.lastname && inputs.company && inputs.email && inputs.message) {
 			setForm({ state: 'loading' })
 			try {
 				const res = await fetch(`api/contact`, {
@@ -42,11 +47,12 @@ const ContactForm = () => {
 
 				setForm({
 					state: 'success',
-					message: 'Sent Successfully',
+					message: 'Your message was sent successfully.',
 				})
-				contactEvent()
 				setInputs({
-					name: '',
+					firstname: '',
+					lastname: '',
+					company: '',
 					email: '',
 					message: '',
 				})
@@ -58,57 +64,199 @@ const ContactForm = () => {
 			}
 		}
 	}
-
 	return (
-		<form className='w-full md:w-2/4' onSubmit={(e) => onSubmitForm(e)}>
-			<input
-				id='name'
-				aria-label='Name field for Contact form'
-				value={inputs.name}
-				onChange={handleChange}
-				placeholder='Name'
-				type='text'
-				required
-				className='input mb-4'
-			/>
-			<input
-				id='email'
-				aria-label='Email field for Contact form'
-				value={inputs.email}
-				onChange={handleChange}
-				placeholder='Email'
-				type='email'
-				required
-				className='input mb-4'
-			/>
-			<textarea
-				id='message'
-				aria-label='Message field for Contact form'
-				value={inputs.message}
-				onChange={(e) => handleChange(e)}
-				placeholder='Your Message'
-				type='text'
-				rows='5'
-				required
-				className='input mb-4'
-			/>
-			<div className='flex flex-row items-center'>
-				<button type='submit' className='btn btn-themed uppercase w-2/4'>
-					Send
-				</button>
-				<span className='ml-2'>
-					{form.state === 'loading' && <LoadingSpinner />}
-					{form.state === 'error' ? (
-						<ErrorMessage>{form.message}</ErrorMessage>
-					) : form.state === 'success' ? (
-						<SuccessMessage>{form.message}</SuccessMessage>
-					) : (
-						''
-					)}
-				</span>
-			</div>
-		</form>
+		
+    <div>
+<TextBox>
+		<SectionTitle>
+		Take Control Of Your Security
+		</SectionTitle>
+		<SectionText>
+		Speak to an advisor to see how Immunitas can help your business.
+		</SectionText>
+</TextBox>
+			<Form  onSubmit={(e) => onSubmitForm(e)}>
+
+				<NamesGrid>
+				<InputNames
+					id='firstname'
+					type='text'
+					value={inputs.firstname}
+					onChange={handleChange}
+					placeholder='First Name'
+					required
+				/>
+
+				<InputNames
+					id='lastname'
+					type='text'
+					value={inputs.lastname}
+					onChange={handleChange}
+					placeholder='Last Name'
+					required
+				/>
+				</NamesGrid>
+				<Input
+					id='email'
+					type='email'
+					value={inputs.email}
+					onChange={handleChange}
+					placeholder='Business Email'
+					required
+				/>
+
+				<Input
+					id='company'
+					type='text'
+					value={inputs.company}
+					onChange={handleChange}
+					placeholder='Company'
+					required
+				/>
+
+				<Textarea
+					id='message'
+					type='text'
+					value={inputs.message}
+					onChange={handleChange}
+					placeholder='How Can We Help You?'
+					rows='5'
+					required
+				/>
+
+				<ServiceButton>
+				<input type='submit' />
+				</ServiceButton>
+
+				{form.state === 'loading' ? (
+					<div>Sending....</div>
+				) : form.state === 'error' ? (
+					<div>{form.message}</div>
+				) : (
+					form.state === 'success' && 
+          
+          <div>
+      Sent successfully 
+          </div>
+				)}
+			</Form>
+		</div>
 	)
 }
 
-export default ContactForm
+const Form = styled.form`
+display: grid;
+grid-gap: 2rem;
+padding: 1rem;
+
+
+@media ${(props) => props.theme.breakpoints.sm} {
+    width: 30rem;
+  }
+  @media ${(props) => props.theme.breakpoints.md} {
+    width: 50rem;
+  }
+`;
+
+const Textarea = styled.textarea`  
+ border-radius:0.5rem;
+ padding-block:1rem;
+ padding-left:1rem;
+ color: black;
+ width:50rem;
+ height:20rem;
+ overflow-y: auto;
+ scrollbar-width: thin;         
+ scrollbar-color: black; 
+ outline: none;
+ resize: none;
+
+
+::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #F5F5F5;
+}
+::-webkit-scrollbar
+{
+	width: 12px;
+	background-color: #F5F5F5;
+}
+::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color:  rgba(255, 255, 255, .01);
+}
+
+ @media ${(props) => props.theme.breakpoints.sm} {
+    width: 100%;
+  }
+  @media ${(props) => props.theme.breakpoints.md} {
+    width: 100%;
+
+  }
+
+ `;
+
+const Input = styled.input`
+border-radius:0.5rem;
+padding-block:1rem;
+padding-left:1rem;
+color: black;
+background-color:white;
+width:50rem;
+outline: none;
+
+@media ${(props) => props.theme.breakpoints.sm} {
+    width: 100%;
+  }
+  @media ${(props) => props.theme.breakpoints.md} {
+    width: 100%;
+  }
+`;
+
+
+const InputNames = styled.input`
+border-radius:0.5rem;
+padding-block:1rem;
+padding-left:1rem;
+color: black;
+width:24rem;
+outline: none;
+
+@media ${(props) => props.theme.breakpoints.sm} {
+    width: 100%;
+  }
+  @media ${(props) => props.theme.breakpoints.md} {
+    width: 100%;
+  }
+`;
+
+
+const NamesGrid = styled.div`
+
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+grid-template-rows: 1fr;
+grid-column-gap: 2rem;
+
+`
+
+const TextBox = styled.div`
+
+width:50rem;
+padding-inline:1rem;
+
+@media ${(props) => props.theme.breakpoints.sm} {
+    width: 30rem;
+   
+  }
+  @media ${(props) => props.theme.breakpoints.md} {
+    width: 50rem;
+ 
+  }
+
+`;
+

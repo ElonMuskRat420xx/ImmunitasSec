@@ -8,7 +8,8 @@ export const CarouselContainer = styled.ul`
   list-style:none;
   display: flex;
   justify-content: space-between; 
-  /* overflow-x: hidden; */
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
 
   margin-left: 32px;
   &:first-of-type{
@@ -25,7 +26,7 @@ export const CarouselContainer = styled.ul`
 
   @media ${props => props.theme.breakpoints.sm} {
     overflow-x: scroll;
-    -webkit-overflow-scrolling: touch;
+    -webkit-overflow-scrolling:touch;
     scroll-snap-type: x mandatory;
     touch-action: pan-x;
     justify-content: initial;
@@ -33,6 +34,9 @@ export const CarouselContainer = styled.ul`
   }
 `
 export const CarouselMobileScrollNode = styled.div`
+display: flex;
+    min-width: ${({ final }) => final ? `100%;` : `min-content`};
+
   @media ${props => props.theme.breakpoints.sm} {
     display: flex;
     min-width: ${({ final }) => final ? `120%;` : `min-content`}
@@ -40,9 +44,14 @@ export const CarouselMobileScrollNode = styled.div`
 `
 
 export const CarouselItem = styled.div`
-  background: #0F1624;
-  border-radius: 3px;
-  max-width: 196px;
+  background: #212D45;
+  border-radius: 15px;
+  width: 30rem;
+  padding:1rem;
+  margin-inline:1rem;
+  
+
+  
 
   @media ${props => props.theme.breakpoints.md} {
     max-width: 124px;
@@ -153,7 +162,53 @@ export const CarouselButtonDot = styled.div`
   height: 3px;
 `
 
+
+export const CardSection = styled.section`
+  display: ${(props) => props.grid ? "grid" : "flex" };
+  flex-direction: ${(props) => props.row ? "row" : "column" };
+  padding: ${(props) => props.nopadding ? "0" : "32px 48px 0" } ;
+  margin: 0 auto;
+  max-width: 1040px;
+  box-sizing: content-box;
+  position: relative;
+  overflow: hidden;
+  grid-template-columns: 1fr 1fr;
+  
+
+
+  @media ${(props) => props.theme.breakpoints.md} {
+    padding: 24px 48px 0;
+    flex-direction: column;
+  }
+
+  @media ${(props) => props.theme.breakpoints.sm} {
+    padding: ${(props) => props.nopadding ? "0" : "16px 16px 0" } ;
+
+    width: calc(100vw - 32px);
+    flex-direction: column;
+  }
+  `
+
 export const SliderContainer = styled.div`
 display:flex;
 flex-direction:row;
 `
+
+export const LeftArrow = styled.div`
+  position: relative;
+  margin-top:5rem;
+  padding:1rem;
+  z-index: 10;
+  cursor: pointer;
+  user-select: none;
+`
+
+export const RightArrow = styled.div`
+  position: relative;
+  margin-top:5rem;
+  padding:1rem;
+  z-index: 10;
+  cursor: pointer;
+  user-select: none;    
+`
+

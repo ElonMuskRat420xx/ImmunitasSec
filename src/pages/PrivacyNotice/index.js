@@ -1,17 +1,15 @@
 import Theme from '../../styles/theme';
 import { Layout } from '../../layout/Layout';
-import Resources from '../../components/Resources/Resources';
+import PrivacyNotice from '../../components/T&CS/PrivacyNotice';
 import Footer from '../../components/Footer/Footer'
 
-
-  export default function ResourcePage ({ Component, pageProps }) {
+  export default function PrivacyNotices ({ Component, pageProps }) {
     return (
       <>
         <Theme>
 <Layout>
 
-
-<Resources/>
+<PrivacyNotice/>
 
 <Footer/>
 
