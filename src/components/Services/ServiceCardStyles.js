@@ -2,13 +2,9 @@
 import styled from 'styled-components';
 
 export const StyledCard = styled.div`
-
   background: rgb(33, 45, 69);
   padding: 2rem;
-  margin:2rem;
   border-radius: 25px;
-  transform:scale(0.75);
-
   @media ${(props) => props.theme.breakpoints.sm}  {
     flex-direction: column;
   }
@@ -18,8 +14,6 @@ export const StyledCard = styled.div`
 
 export const Content = styled.div`
 
-  justify-content: center;
-
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
   }
   @media (max-width: ${(props) => props.theme.breakpoints.s}) {
@@ -27,8 +21,7 @@ export const Content = styled.div`
 `
 
 export const CardImage = styled.div`
-  align-self: center;
-  width: 80%;
+  width: 50%;
   @media (max-width: ${(props) => props.theme.breakpoints.sm}) {
    
   }
@@ -36,12 +29,15 @@ export const CardImage = styled.div`
 
 
 export const ServiceCardText = styled.p`
-  font-size: 24px;
-  line-height: 40px;
+  font-size: 18px;
+  line-height: 28px;
   font-weight: 300;
   padding-inline:2rem;
   padding-block:1rem;
   color: rgba(255, 255, 255, 0.5);
+
+
+
 
   @media ${(props) => props.theme.breakpoints.md} {
     max-width: 670px;
@@ -59,12 +55,13 @@ export const ServiceCardText = styled.p`
 
 export const ServiceCardTitle = styled.h2`
   font-weight: 800;
-  font-size: 56px;
-  line-height: 56px;
-
+  font-size: 32px;
+  line-height: 36px;
   background: linear-gradient(121.57deg, #FFFFFF 18.77%, rgba(255, 255, 255, 0.66) 60.15%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+
+
 
   @media ${props => props.theme.breakpoints.md}{
     font-size: ${(props) => props.main ? '56px' : '48px'};

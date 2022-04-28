@@ -51,7 +51,7 @@ export const CalloutBanner2 = ({
     
     <CardImage>
     <Image
-      src={NetworkSecurity}
+      src={Red1}
       alt="CardImage"
       width="500px"
       height="500px"
@@ -80,7 +80,7 @@ export const CalloutBanner3 = ({
     
     <CardImage>
     <Image
-      src={RedTeam}
+      src={Red1}
       alt="CardImage"
       width="500px"
       height="500px"
@@ -108,7 +108,7 @@ export const CalloutBanner4 = ({
     
     <CardImage>
     <Image
-      src={SocialEngineering}
+      src={Red1}
       alt="CardImage"
       width="500px"
       height="500px"
@@ -137,7 +137,7 @@ export const CalloutBanner5 = ({
     
     <CardImage>
     <Image
-      src={RedTeam}
+      src={Red1}
       alt="CardImage"
       width="500px"
       height="500px"

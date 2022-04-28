@@ -111,11 +111,11 @@ export const LeftSection = styled.div`
 `;
 
 export const ServiceGrid = styled.section`
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: flex-start;
-  align-content: flex-start;
+  display: grid; 
+  grid-auto-columns: 1fr; 
+  grid-template-columns: 1fr 1fr; 
+  grid-template-rows: 1fr 1fr; 
+  gap: 2.5rem 2.5rem; 
 
 @media ${(props) => props.theme.breakpoints.sm} {
   display: flex;
@@ -124,6 +124,7 @@ export const ServiceGrid = styled.section`
   padding-bottom: 5;
 }
 `
+
 export const ServiceSection = styled.section`
   display: ${(props) => props.grid ? "grid" : "flex" };
   flex-direction: ${(props) => props.row ? "row" : "column" };

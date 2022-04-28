@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'next/link';
 import Image from 'next/image';
-import { TopHeroContainer, TopHeroRowReverse, TopRightColumn, TopRightColContent, TopLeftColumn, TopLeftColContent, TopRightColImage, LeftSection, ServiceGrid, ServiceSection } from './ServicesStyle'; 
+import { TopHeroContainer, TopHeroRowReverse, TopRightColumn, TopRightColContent, TopLeftColumn, TopLeftColContent, TopRightColImage, LeftSection, ServiceGrid, ServiceSection, Scale } from './ServicesStyle'; 
 import { Section, SectionDivider, SectionSubText, SectionText, SectionTitle } from '../../styles/GlobalComponents';
 import ServiceButton from '../../styles/GlobalComponents/ServiceButton';
 import HeroButton from '../../styles/GlobalComponents/HeroButton';
@@ -13,9 +13,8 @@ function Services(props) {
   return (
 
 
-<ServiceSection>
-
 <Section>
+
 
 <TopHeroContainer>
 <TopHeroRowReverse>
@@ -72,9 +71,7 @@ All our assessments are conducted by professional ethical hackers with the skill
 </LeftSection>
 <SectionDivider/>
 
-</Section>
 
-<Section>
 <SectionTitle>
 Cyber Security Assessment Services
 </SectionTitle>
@@ -89,9 +86,7 @@ Cyber Security Assessment Services
 
 
   <Link href="/PenetrationTesting">
-  <ServiceButton onClick={props.handleClick}>
-    Learn More
-  </ServiceButton>
+  <h1>Text</h1>
   </Link>
   </CalloutBanner1> 
 
@@ -102,9 +97,8 @@ Cyber Security Assessment Services
     description={"Our web application penetration testing service can be commissioned to assess the security of websites and applications developed in-house or by third-party vendors."}
   >
   <Link href="/ApplicationSecurity">
-  <ServiceButton onClick={props.handleClick}>
-    Learn More
-  </ServiceButton>
+  <h1>Text</h1>
+
   </Link>
   </CalloutBanner2> 
 
@@ -115,9 +109,8 @@ Cyber Security Assessment Services
     description={"With an intelligence-led Red Team Operation, test your organisation’s preparedness to prevent, detect and respond to a targeted cyber-attack simulation. "}
   >
   <Link href="/RedTeaming">
-  <ServiceButton onClick={props.handleClick}>
-    Learn More
-  </ServiceButton>
+  <h1>Text</h1>
+
   </Link>
   </CalloutBanner3> 
 
@@ -128,9 +121,8 @@ Cyber Security Assessment Services
     description={"Assess the ability of your organisation’s systems and personnel to detect and respond to a real-life email phishing exercise."}
   >
   <Link href="/SocialEngineering">
-  <ServiceButton onClick={props.handleClick}>
-    Learn More
-  </ServiceButton>
+  <h1>Text</h1>
+
   </Link>
   </CalloutBanner4> 
 
@@ -141,16 +133,14 @@ Cyber Security Assessment Services
     description={"With our vulnerability assessment service, you can better understand and manage your organisation’s cyber security risks by receiving help to identify, classify and mitigate them. "}
   >
   <Link href="/VulerabilityAssessment">
-  <ServiceButton onClick={props.handleClick}>
-    Learn More
-  </ServiceButton>
+  <h1>Text</h1>
+
   </Link>
   </CalloutBanner5> 
 
 </ServiceGrid>
-</Section>
 
-</ServiceSection>
+</Section>
 
 )
 }
