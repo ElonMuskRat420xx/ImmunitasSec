@@ -1,14 +1,6 @@
 import React from "react"
 import Image from "next/image"
-import { StyledCard, Content, ServiceCardText, ServiceCardTitle,CardImage } from "./ServiceCardStyles"
-
-import NetworkSecurity from '../../../public/images/NetworkTesting.png'
-import RedTeam from '../../../public/images/RedTeaming.png'
-import SocialEngineering from '../../../public/images/SocialEngineering.png'
-import Red1 from '../../../public/images/Redscan1.svg'
-
-
-
+import { StyledCard, Content, ServiceCardText, ServiceCardTitle, CardImage } from "./ServiceCardStyles"
 
 export const CalloutBanner1 = ({
 
@@ -20,24 +12,15 @@ export const CalloutBanner1 = ({
 
   <StyledCard>
     <Content>
-
-    <CardImage>
-    <Image
-      src={Red1}
-      alt="CardImage"
-      width="500px"
-      height="500px"
-
-    />
-    </CardImage>
+      <CardImage>
+        <h1>Image</h1>
+      </CardImage>
       <ServiceCardTitle>{title}</ServiceCardTitle>
       <ServiceCardText>{description}</ServiceCardText>
       {children}
     </Content>
   </StyledCard>
 )
-
-
 
 export const CalloutBanner2 = ({
   title,
@@ -48,24 +31,15 @@ export const CalloutBanner2 = ({
 
   <StyledCard>
     <Content>
-    
-    <CardImage>
-    <Image
-      src={Red1}
-      alt="CardImage"
-      width="500px"
-      height="500px"
-
-    />
-    </CardImage>
+      <CardImage>
+        <h1>Image</h1>
+      </CardImage>
       <ServiceCardTitle>{title}</ServiceCardTitle>
       <ServiceCardText>{description}</ServiceCardText>
       {children}
     </Content>
   </StyledCard>
 )
-
-
 
 export const CalloutBanner3 = ({
 
@@ -77,24 +51,15 @@ export const CalloutBanner3 = ({
 
   <StyledCard>
     <Content>
-    
-    <CardImage>
-    <Image
-      src={Red1}
-      alt="CardImage"
-      width="500px"
-      height="500px"
-
-    />
-    </CardImage>
+      <CardImage>
+        <h1>Image</h1>
+      </CardImage>
       <ServiceCardTitle>{title}</ServiceCardTitle>
       <ServiceCardText>{description}</ServiceCardText>
       {children}
     </Content>
   </StyledCard>
 )
-
-
 
 export const CalloutBanner4 = ({
   title,
@@ -105,24 +70,15 @@ export const CalloutBanner4 = ({
 
   <StyledCard>
     <Content>
-    
-    <CardImage>
-    <Image
-      src={Red1}
-      alt="CardImage"
-      width="500px"
-      height="500px"
-
-    />
-    </CardImage>
+      <CardImage>
+        <h1>Image</h1>
+      </CardImage>
       <ServiceCardTitle>{title}</ServiceCardTitle>
       <ServiceCardText>{description}</ServiceCardText>
       {children}
     </Content>
   </StyledCard>
 )
-
-
 
 export const CalloutBanner5 = ({
   title,
@@ -134,16 +90,9 @@ export const CalloutBanner5 = ({
 
   <StyledCard>
     <Content>
-    
-    <CardImage>
-    <Image
-      src={Red1}
-      alt="CardImage"
-      width="500px"
-      height="500px"
-
-    />
-    </CardImage>
+      <CardImage>
+        <h1>Image</h1>
+      </CardImage>
       <ServiceCardTitle>{title}</ServiceCardTitle>
       <ServiceCardText>{description}</ServiceCardText>
       {children}

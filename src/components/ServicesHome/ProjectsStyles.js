@@ -6,12 +6,9 @@ export const Img = styled.img`
   object-fit: cover;
   overflow: hidden;
 `
-
 export const GridContainer = styled.section`
 display: flex;
 flex-direction:row;
-
-
 
 @media ${(props) => props.theme.breakpoints.sm} {
   display: flex;
@@ -19,7 +16,6 @@ flex-direction:row;
   padding: 2rem;
   padding-bottom: 5;
 }
-
 `
 export const BlogCard = styled.div`
   border-radius: 10px;
@@ -33,8 +29,6 @@ export const BlogCard = styled.div`
 
 export const name = styled.div`
   
-
-
 `;
 
 export const TitleContent = styled.div`

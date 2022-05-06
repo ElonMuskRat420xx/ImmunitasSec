@@ -11,7 +11,6 @@ export const StyledCard = styled.div`
   @media ${(props) => props.theme.breakpoints.xs}  {
   }
 `
-
 export const Content = styled.div`
 
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
@@ -26,8 +25,6 @@ export const CardImage = styled.div`
    
   }
 `
-
-
 export const ServiceCardText = styled.p`
   font-size: 18px;
   line-height: 28px;
@@ -35,9 +32,6 @@ export const ServiceCardText = styled.p`
   padding-inline:2rem;
   padding-block:1rem;
   color: rgba(255, 255, 255, 0.5);
-
-
-
 
   @media ${(props) => props.theme.breakpoints.md} {
     max-width: 670px;
@@ -60,8 +54,6 @@ export const ServiceCardTitle = styled.h2`
   background: linear-gradient(121.57deg, #FFFFFF 18.77%, rgba(255, 255, 255, 0.66) 60.15%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-
-
 
   @media ${props => props.theme.breakpoints.md}{
     font-size: ${(props) => props.main ? '56px' : '48px'};

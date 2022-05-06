@@ -21,4 +21,6 @@ export default {
     lg: 'screen and (max-width: 1366px)',
     xl: 'screen and (max-width: 1920px)'
   },
+
+
 }

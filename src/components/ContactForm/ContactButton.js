@@ -18,7 +18,7 @@ export const ContactButtonContainer = styled.div`
 
 export const ChatButton = styled.button`
 
-    background:linear-gradient(270deg,#13ADC7 0%,#945DD6 100%);
+    background:#BF5249;
     box-shadow: rgb(0 0 0 / 10%) 0px 1px 6px, rgb(0 0 0 / 20%) 0px 2px 24px;
     border: none;
     transition: box-shadow 150ms ease-in-out 0s;

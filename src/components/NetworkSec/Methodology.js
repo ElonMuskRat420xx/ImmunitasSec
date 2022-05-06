@@ -4,78 +4,44 @@ import { StepHeading } from '../../constants/NetworkSecConstants';
 import styled from 'styled-components'
 
 const data = [
-    { text1: '.01 Scoping', text2: 'Redscan’s network and infrastructure testing experts work with you to define any networks and assets in scope and devise an appropriate assessment strategy.'},
-    { text1: '.02 Reconnaissance & Intelligence Gathering ', text2: 'Our network penetration testers use the latest intelligence gathering techniques to uncover security and technical information that could be used to help them access your network.', },
-    { text1: '.03 Active Scanning & Vulnerability Analaysis', text2: 'Using a combination of manual and automated tools, out testers identify security weaknesses and develop a strategy to exploit them.', },
-    { text1: '.04 Explotation', text2: 'To obtain initial access to your network, our experienced network penetration testers exploit all identified vulnerabilities, but in a safe way that avoids damage and disruption.', },
-    { text1: '.05 Reporting', text2: 'Once a network assessment is complete, our testers document key findings and supply prioritised remediation guidance to help address any identified exposures.', },
+  { text1: '.01 Scoping', text2: 'Redscan’s network and infrastructure testing experts work with you to define any networks and assets in scope and devise an appropriate assessment strategy.' },
+  { text1: '.02 Reconnaissance & Intelligence Gathering ', text2: 'Our network penetration testers use the latest intelligence gathering techniques to uncover security and technical information that could be used to help them access your network.', },
+  { text1: '.03 Active Scanning & Vulnerability Analaysis', text2: 'Using a combination of manual and automated tools, out testers identify security weaknesses and develop a strategy to exploit them.', },
+  { text1: '.04 Explotation', text2: 'To obtain initial access to your network, our experienced network penetration testers exploit all identified vulnerabilities, but in a safe way that avoids damage and disruption.', },
+  { text1: '.05 Reporting', text2: 'Once a network assessment is complete, our testers document key findings and supply prioritised remediation guidance to help address any identified exposures.', },
 
-  ];
-  
-const TOTAL_CAROUSEL_COUNT = StepHeading.length;
+];
 
 const TestingApproach = () => {
-  const [activeItem, setActiveItem] = useState(0);
-  const carouselRef = useRef();
-
-  const scroll = (node, left) => {
-    return node.scrollTo({ left, behavior: 'smooth' });
-  }
-
-  const handleClick = (e, i) => {
-    e.preventDefault();
-
-    if (carouselRef.current) {
-      const scrollLeft = Math.floor(carouselRef.current.scrollWidth * 0.7 * (i / StepHeading.length));
-      
-      scroll(carouselRef.current, scrollLeft);
-    }
-  }
-
-  const handleScroll = () => {
-    if (carouselRef.current) {
-      const index = Math.round((carouselRef.current.scrollLeft / (carouselRef.current.scrollWidth * 0.7)) * StepHeading.length);
-
-      setActiveItem(index);
-    }
-  }
-
-  useEffect(() => {
-    const handleResize = () => {
-      scroll(carouselRef.current, 0);
-    }
-
-    window.addEventListener('resize', handleResize);
-  }, []);
 
   return (
 
     <Section>
-    
-      <ApproachTitle>Our Approach To Network Testing
+      <ApproachTitle>
+        Our Approach To Network Testing
       </ApproachTitle>
 
       <SectionText>
-      An Immunitas network test follows a tried and tested methodology to identify, exploit and help address vulnerabilities. Here’s how we approach an external network assessment:
+        An Immunitas network test follows a tried and tested methodology to identify, exploit and help address vulnerabilities. Here’s how we approach an external network assessment:
       </SectionText>
-   
-    <ApproachBoxes>
-      {data.map((card, index) => (
-        <ApproachBox key={index}>
-          <ApproachBoxNum>{`${card.text1}`}</ApproachBoxNum>
-          <ApproachBoxText>{card.text2}</ApproachBoxText>
-        </ApproachBox>
-      ))}
-    </ApproachBoxes>
 
-   </Section>
+      <ApproachBoxes>
+        {data.map((card, index) => (
+          <ApproachBox key={index}>
+            <ApproachBoxNum>{`${card.text1}`}</ApproachBoxNum>
+            <ApproachBoxText>{card.text2}</ApproachBoxText>
+          </ApproachBox>
+        ))}
+      </ApproachBoxes>
 
-    
+    </Section>
+
+
   );
 };
 
 export default TestingApproach;
-  
+
 const PageTitle = styled.h2`
 font-weight: 800;
 font-size: ${(props) => props.main ? '65px' : '56px'};
@@ -164,7 +130,7 @@ const ApproachBox = styled.div`
   }
 
   @media ${props => props.theme.breakpoints.sm} {
-    height: 100%px;
+    height: 100%;
     padding: 12px;
     margin-top:10px;
     

@@ -1,9 +1,9 @@
 import styled from 'styled-components'
 
 export const Section = styled.section`
-  display: ${(props) => props.grid ? "grid" : "flex" };
-  flex-direction: ${(props) => props.row ? "row" : "column" };
-  padding: ${(props) => props.nopadding ? "0" : "32px 48px 0" } ;
+  display: ${(props) => props.grid ? "grid" : "flex"};
+  flex-direction: ${(props) => props.row ? "row" : "column"};
+  padding: ${(props) => props.nopadding ? "0" : "32px 48px 0"} ;
   margin: 0 auto;
   max-width: 1040px;
   box-sizing: content-box;
@@ -17,7 +17,7 @@ export const Section = styled.section`
   }
 
   @media ${(props) => props.theme.breakpoints.sm} {
-    padding: ${(props) => props.nopadding ? "0" : "16px 16px 0" } ;
+    padding: ${(props) => props.nopadding ? "0" : "16px 16px 0"} ;
 
     width: calc(100vw - 32px);
     flex-direction: column;
@@ -25,10 +25,10 @@ export const Section = styled.section`
   `
 
 
-  export const SectionContact = styled.section`
-  display: ${(props) => props.grid ? "grid" : "flex" };
-  flex-direction: ${(props) => props.row ? "row" : "column" };
-  padding: ${(props) => props.nopadding ? "0" : "70px 50px 0" } ;
+export const SectionContact = styled.section`
+  display: ${(props) => props.grid ? "grid" : "flex"};
+  flex-direction: ${(props) => props.row ? "row" : "column"};
+  padding: ${(props) => props.nopadding ? "0" : "70px 50px 0"} ;
   margin: 0 auto;
   margin-bottom:10rem;
   max-width: 1920px;
@@ -44,7 +44,7 @@ export const Section = styled.section`
   }
 
   @media ${(props) => props.theme.breakpoints.sm} {
-    padding: ${(props) => props.nopadding ? "0" : "16px 16px 0" } ;
+    padding: ${(props) => props.nopadding ? "0" : "16px 16px 0"} ;
 
 
     width: calc(100vw - 32px);
@@ -83,14 +83,13 @@ export const SectionTitle = styled.h2`
     max-width: 100%;
   }
 `
-
 export const SectionSubTitle = styled.h2`
   font-weight: 800;
   font-size: ${(props) => props.main ? '42px' : '38px'};
   line-height: ${(props) => props.main ? '72px' : '56px'};
   width: max-content;
   max-width: 100%;
-  background: linear-gradient(121.57deg, #FFFFFF 18.77%, rgba(255, 255, 255, 0.66) 60.15%);
+  background: white;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 
@@ -143,11 +142,11 @@ export const SectionDivider = styled.div`
   height: 6px;
   border-radius: 10px;
   background-color: #fff;
-  background: ${(props) => props.colorAlt ? 
+  background: ${(props) => props.colorAlt ?
     'linear-gradient(270deg, #F46737 0%, #945DD6 100%)' :
     'linear-gradient(270deg, #13ADC7 0%, #945DD6 100%)'};
 
-    margin: ${(props) => props.divider ? "4rem 0" : "" };
+    margin: ${(props) => props.divider ? "4rem 0" : ""};
 
   @media ${(props) => props.theme.breakpoints.md} {
     width: 48px;
@@ -179,10 +178,9 @@ export const SectionSubText = styled.p`
 `
 export const SecondaryBtn = styled.button`
   color: #FFF;
-  background: none;
-  border: 1px solid rgba(255, 255, 255, 0.33);
+  background: #BF5249;
   box-sizing: border-box;
-  border-radius: 999px;
+  border-radius: 25px;
   padding: 16px 24px;
   font-weight: 600;
   font-size: 18px;
@@ -197,9 +195,8 @@ export const SecondaryBtn = styled.button`
   }
 
   &:hover {
-    color: #0f1624;
-    background: #fff;
-    border: 1px solid #fff;
+    color: white;
+    background:#212D45 ;
   }
 
   &:active {
@@ -354,7 +351,9 @@ export const ServiceButtonBack = styled.div`
   justify-content: center;
   margin: ${({ alt, form }) => (alt || form) ? '0' : '0 0 80px'};
   color: #fff;
-  background: ${({ alt }) => alt ? 'linear-gradient(270deg, #ff622e 0%, #B133FF 100%)' : 'linear-gradient(270deg, #00DBD8 0%, #B133FF 100%)'};
+  background:#0F1624;
+  
+
   cursor: pointer;
   transition: 0.5s ease;
   position: relative;
@@ -387,7 +386,8 @@ export const ServiceButtonFront = styled.button`
   left: 0;
   width: 100%;
   height: 100%;
-  background: ${({ alt }) => alt ? 'linear-gradient(270deg, #F46737 0%, #945DD6 100%)' : 'linear-gradient(270deg, #13ADC7 0%, #945DD6 100%)'};
+  background: #0F1624;
+
   opacity: ${({ disabled }) => disabled ? '.5' : '1'};
   transition: .4s ease;
   font-size: ${({ alt }) => alt ? '20px' : '24px'};
@@ -395,24 +395,20 @@ export const ServiceButtonFront = styled.button`
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  box-shadow: ${({ disabled }) => disabled ? 'inset 0px 2px 1px rgba(46, 49, 55, 0.15), inset 0px 0px 4px rgba(20, 20, 55, 0.3)' : 'none'};
 
   &:hover {
     opacity: 0;
+
   }
   &:focus {
     outline: none;
   }
   &:active {
     opacity: 1;
-    box-shadow: inset 0px 2px 1px rgba(46, 49, 55, 0.15), inset 0px 0px 4px rgba(20, 20, 55, 0.3);
+    box-shadow: 3px 3px 20px rgba(80, 78, 78, 0.5);
+
   }
 
-  &:disabled{
-    background: linear-gradient(270deg, #00DBD8 0%, #B133FF 100%);
-    opacity: 0.5;
-    box-shadow: inset 0px 2px 1px rgba(46, 49, 55, 0.15), inset 0px 0px 4px rgba(20, 20, 55, 0.3);
-  }
 
   @media ${(props) => props.theme.breakpoints.md} {
     font-size: ${({ alt }) => alt ? '20px' : '16px'};
@@ -507,3 +503,54 @@ export const HeroButtonFront = styled.button`
     font-size: 14px;
   }
 `
+
+
+export const PrimaryBtn = styled.button`
+  color: #FFF;
+  background: #BF5249;
+  box-sizing: border-box;
+  border-radius: 25px;
+  padding: 16px 24px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 16px;
+  width: fit-content;
+  margin-bottom: 4rem;
+  cursor: pointer;
+  transition: 0.4s ease;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover {
+    color: white;
+    background:#212D45 ;
+  }
+
+  &:active {
+    background: #e0e4eb;
+    border: 1px solid #304169;
+    box-shadow: inset 0px 2px 1px rgba(46, 49, 55, 0.15), inset 0px 0px 4px rgba(20, 20, 55, 0.3);
+  }
+
+  @media ${(props) => props.theme.breakpoints.md}{
+    margin-top: 24px; 
+    margin-bottom: 64px;
+    padding: 16px 24px;
+    width: fit-content;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @media ${(props) => props.theme.breakpoints.sm} {
+    margin-top: 16px;
+    margin-bottom: 40px;
+    padding: 8px 16px;
+    width: 100%;
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+
+` 

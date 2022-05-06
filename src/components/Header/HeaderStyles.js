@@ -167,3 +167,7 @@ border-radius: 50px;
 `
 
 
+export const List = styled.li`
+list-style:  none;
+}
+`

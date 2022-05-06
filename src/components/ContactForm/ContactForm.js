@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import styled from 'styled-components';
-import {SectionTitle, SectionText } from '../../styles/GlobalComponents';
-import ServiceButton from '../../styles/GlobalComponents/ServiceButton'
+import { SectionTitle, SectionText } from '../../styles/GlobalComponents';
+import { PrimaryBtn } from '../../styles/GlobalComponents/index';
 
 export default function ContactForm() {
 	const [inputs, setInputs] = useState({
@@ -65,36 +65,29 @@ export default function ContactForm() {
 		}
 	}
 	return (
-		
-    <div>
-<TextBox>
-		<SectionTitle>
-		Take Control Of Your Security
-		</SectionTitle>
-		<SectionText>
-		Speak to an advisor to see how Immunitas can help your business.
-		</SectionText>
-</TextBox>
-			<Form  onSubmit={(e) => onSubmitForm(e)}>
+
+		<div>
+
+			<Form onSubmit={(e) => onSubmitForm(e)}>
 
 				<NamesGrid>
-				<InputNames
-					id='firstname'
-					type='text'
-					value={inputs.firstname}
-					onChange={handleChange}
-					placeholder='First Name'
-					required
-				/>
+					<InputNames
+						id='firstname'
+						type='text'
+						value={inputs.firstname}
+						onChange={handleChange}
+						placeholder='First Name'
+						required
+					/>
 
-				<InputNames
-					id='lastname'
-					type='text'
-					value={inputs.lastname}
-					onChange={handleChange}
-					placeholder='Last Name'
-					required
-				/>
+					<InputNames
+						id='lastname'
+						type='text'
+						value={inputs.lastname}
+						onChange={handleChange}
+						placeholder='Last Name'
+						required
+					/>
 				</NamesGrid>
 				<Input
 					id='email'
@@ -124,20 +117,20 @@ export default function ContactForm() {
 					required
 				/>
 
-				<ServiceButton>
-				<input type='submit' />
-				</ServiceButton>
+				<PrimaryBtn>
+					<input type='submit' />
+				</PrimaryBtn>
 
 				{form.state === 'loading' ? (
 					<div>Sending....</div>
 				) : form.state === 'error' ? (
 					<div>{form.message}</div>
 				) : (
-					form.state === 'success' && 
-          
-          <div>
-      Sent successfully 
-          </div>
+					form.state === 'success' &&
+
+					<div>
+						Sent successfully
+					</div>
 				)}
 			</Form>
 		</div>
@@ -238,9 +231,8 @@ outline: none;
 const NamesGrid = styled.div`
 
 display: grid;
-grid-template-columns: repeat(2, 1fr);
+grid-template-columns: repeat(2, 33%);
 grid-template-rows: 1fr;
-grid-column-gap: 2rem;
 
 `
 

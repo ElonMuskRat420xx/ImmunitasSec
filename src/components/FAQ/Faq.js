@@ -1,4 +1,4 @@
-import {React} from 'react';
+import { React } from 'react';
 import styled from 'styled-components';
 import { Section, SectionSubTitle, SectionDivider, SectionTitle } from '../../styles/GlobalComponents';
 import SearchBar from './Search';
@@ -10,7 +10,7 @@ import FAQData from "./Data/MainData.json";
 import Link from 'next/link';
 
 const data = [
-  { text1: '.01 ', text2: 'Redscan’s network and infrastructure testing experts work with you to define any networks and assets in scope and devise an appropriate assessment strategy.'},
+  { text1: '.01 ', text2: 'Redscan’s network and infrastructure testing experts work with you to define any networks and assets in scope and devise an appropriate assessment strategy.' },
   { text1: '.02 Reconnaissance & Intelligence Gathering ', text2: 'Our network penetration testers use the latest intelligence gathering techniques to uncover security and technical information that could be used to help them access your network.', },
   { text1: '.03 Active Scanning & Vulnerability Analaysis', text2: 'Using a combination of manual and automated tools, out testers identify security weaknesses and develop a strategy to exploit them.', },
   { text1: '.04 Explotation', text2: 'To obtain initial access to your network, our experienced network penetration testers exploit all identified vulnerabilities, but in a safe way that avoids damage and disruption.', },
@@ -20,61 +20,61 @@ const data = [
 
 
 function Faq() {
-    return (
+  return (
 
-<Section>
+    <Section>
 
-<SectionTitle>
-Frequently Asked Questions
-</SectionTitle>
+      <SectionTitle>
+        Frequently Asked Questions
+      </SectionTitle>
 
-<HeaderFaqText>
-Do you have more questions?
-<ContactText>
-<Link 
-href="/Contact" >Contact Us
-</Link>
-</ContactText>
-</HeaderFaqText>
+      <HeaderFaqText>
+        Do you have more questions?
+        <ContactText>
+          <Link
+            href="/Contact" >Contact Us
+          </Link>
+        </ContactText>
+      </HeaderFaqText>
 
-<SearchBar placeholder="Search For Answers..." data={FAQData} />
+      <SearchBar placeholder="Search For Answers..." data={FAQData} />
 
-<br/>
+      <br />
 
-<br/>
+      <br />
 
-<SectionSubTitle>
-General
-</SectionSubTitle>
+      <SectionSubTitle>
+        General
+      </SectionSubTitle>
 
-<GeneralQuestions>
-  
-</GeneralQuestions>
+      <GeneralQuestions>
 
-<SectionSubTitle>
-Scoping & Testing
-</SectionSubTitle>
+      </GeneralQuestions>
 
-
-<ScopingQuestions>
-
-</ScopingQuestions>
+      <SectionSubTitle>
+        Scoping & Testing
+      </SectionSubTitle>
 
 
-<SectionSubTitle>
-Deliverables & Reporting
-</SectionSubTitle>
+      <ScopingQuestions>
 
-<DeliverableQuestions>
-
-</DeliverableQuestions>
-
-</Section>
+      </ScopingQuestions>
 
 
+      <SectionSubTitle>
+        Deliverables & Reporting
+      </SectionSubTitle>
 
-)
-} 
+      <DeliverableQuestions>
+
+      </DeliverableQuestions>
+
+    </Section>
+
+
+
+  )
+}
 
 export default Faq;
 
@@ -99,7 +99,7 @@ const ContactText = styled.p`
   line-height: 40px;
   font-weight: 300;
   padding-bottom: 1.5rem;
-  color: #9cc9e3;
+  color: #BF5249;
   --tw-text-opacity: 1;
   
   @media ${(props) => props.theme.breakpoints.md} {

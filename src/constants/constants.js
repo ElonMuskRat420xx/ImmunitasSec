@@ -30,11 +30,10 @@ export const projects = [
 ];
 
 export const TimeLineData = [
-  { year: 1, text: 'Intial Scoping', },
-  { year: 2, text: 'Reconnaissance & Intelligence Gathering', },
-  { year: 3, text: 'Active Scanning & Vulnerability Analysis', },
-  { year: 4, text: 'Mapping & Service Identification', },
-  { year: 5, text: 'Application Analysis', },
-  { year: 6, text: 'Privilege Escalation & Pivoting', },
-  { year: 7, text: 'Reporting & Debrief', },
+  { year: '1.Intial Scoping', text: 'The first phase in the methodology is an initial scoping discussion to set the parameters for the project. This ensures that all the critical parts of the network that need to be included in their assessment are identified at the outset, avoiding potential problems later in the process. Pentest People utilise their SecurePortal as a communication channel to ensure that all of the required scoping documents are presented and securely transmitted between the client and the company.', },
+  { year: '2.Reconnaissance', text: 'Reconnaissance & Intelligence Gathering', },
+  { year: '3.Assessment', text: 'Active Scanning & Vulnerability Analysis', },
+  { year: '4.Reporting', text: 'Mapping & Service Identification', },
+  { year: '5.Presentation', text: 'Application Analysis', },
+  { year: '6.Remediation', text: 'Privilege Escalation & Pivoting', },
 ];

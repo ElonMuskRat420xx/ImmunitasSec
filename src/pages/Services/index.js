@@ -6,47 +6,46 @@ import Services from '../../components/Services/Services';
 import React, { useState } from "react";
 import ContactForm from '../../components/ContactForm/ContactForm.js'
 import Modal from '../../components/ContactForm/Modal'
-import { ChatButton , ContactButtonContainer } from '../../components/ContactForm/ContactButton';
+import { ChatButton, ContactButtonContainer } from '../../components/ContactForm/ContactButton';
 import { SiGooglemessages } from "react-icons/si";
 
-  export default function ServicePage ({ Component, pageProps }) {
-    const [showModal, setShowModal] = useState(false);
+export default function ServicePage({ Component, pageProps }) {
+  const [showModal, setShowModal] = useState(false);
 
-    return (
-      <>
+  return (
+    <>
 
-<Theme>
+      <Theme>
 
-<Layout>
+        <Layout>
 
-<Services />
+          <Services />
 
 
-<ContactButtonContainer>
+          <ContactButtonContainer>
 
-<ChatButton onClick={() => setShowModal(true)}> 
-<SiGooglemessages size="5rem" />
-</ChatButton>
+            <ChatButton onClick={() => setShowModal(true)}>
+              <SiGooglemessages size="5rem" />
+            </ChatButton>
 
-</ContactButtonContainer>
+          </ContactButtonContainer>
 
-<Modal
-  onClose={() => setShowModal(false)}
-  show={showModal}
->
-<ContactForm/>
+          <Modal
+            onClose={() => setShowModal(false)}
+            show={showModal}
+          >
+            <ContactForm />
 
-</Modal>  
-        
+          </Modal>
 
-<Footer/>
 
-</Layout>
-  
-  
-</Theme>
-      </>
-    );
-  }
-  
-  
+          <Footer />
+
+        </Layout>
+
+
+      </Theme>
+    </>
+  );
+}
+

@@ -26,7 +26,8 @@ export const Box = styled.div`
   background: #212D45;
   border-radius: 12px;
   height: 100%;
-  padding: 24px;
+  padding: 2rem;
+
   @media ${props => props.theme.breakpoints.lg} {
     height: 100%;
 
@@ -49,11 +50,11 @@ export const Box = styled.div`
 export const BoxNum = styled.h5`
   font-style: normal;
   font-weight: 600;
-  font-size: 36px;
+  font-size: 32px;
   line-height: 40px;
   letter-spacing: 0.01em;
   color: #FFFFFF;
-  margin-bottom: 8px;
+  margin-bottom: 5px;
 
   @media ${props => props.theme.breakpoints.md} {
     font-size: 28px;
@@ -159,4 +160,33 @@ export const Box2 = styled.div`
       grid-row:2;
     }
   }
+`
+export const BoxIcon = styled.div`
+margin-inline:5%;
+
+  @media ${props => props.theme.breakpoints.md} {
+    
+  }
+  @media ${props => props.theme.breakpoints.sm} {
+    
+}
+`
+
+export const BoxTitle = styled.h5`
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 40px;
+  letter-spacing: 0.01em;
+  color: #FFFFFF;
+  margin-bottom: 5px;
+
+  @media ${props => props.theme.breakpoints.md} {
+    font-size: 28px;
+    line-height: 32px;
+  }
+  @media ${props => props.theme.breakpoints.sm} {
+    font-size: 24px;
+    line-height: 26px;
+}
 `

@@ -2,27 +2,27 @@ import React, { useState } from 'react';
 import { ScopingData } from '../Data/DataScoping';
 import styled from 'styled-components';
 import { IconContext } from 'react-icons';
+
 import { FiPlus, FiMinus } from 'react-icons/fi';
+import { FaMinusCircle, FaPlusCircle } from "react-icons/fa";
 
 
 
 const Wrap = styled.div`
 
-  display: flex;
+display: flex;
   justify-content: space-between;
-  align-items: left;
+  flex-direction: row-reverse;
+  justify-content: left;
   width: 100%;
-  text-align: left;
   cursor: pointer;
+  padding:0.25rem;  
 
   h1 {
     font-size: 2rem;
   }
-
   span {
     margin-right: 1em;
-    padding-right:10px;
-
   }
 `;
 
@@ -40,32 +40,33 @@ const ScopingQuestions = () => {
   };
 
   return (
-    <IconContext.Provider value={{ color: '#9cc9e3', size: '25px'
-  }}>
-        <DropDownBoxes>
-          {ScopingData.map((value, index) => {
-            return (
-              <>
+    <IconContext.Provider value={{
+      color: '#BF5249', size: '1.5rem'
+    }}>
+      <DropDownBoxes>
+        {ScopingData.map((value, index) => {
+          return (
+            <>
               <DropDownBox>
-              <Wrap onClick={() => toggle(index)} key={index, value} >
+                <Wrap onClick={() => toggle(index)} key={index, value} >
                   <h1>{value.question}</h1>
-                  <span>{clicked === index ? <FiMinus /> : <FiPlus />}</span>
+                  <span className='self-center'>{clicked === index ? <FaMinusCircle /> : <FaPlusCircle />}</span>
                 </Wrap>
                 {clicked === index ? (
                   <DropDownBoxText>
-                <p className="pb-4">{value.answer_section1}</p>
-                <p className="pb-4">{value.answer_section2}</p>
-                <p className="pb-4">{value.answer_section3}</p>
-                <p className="pb-4">{value.answer_section4}</p>
-                <p className="">{value.answer_section5}</p>
-             
+                    <p className="pb-4">{value.answer_section1}</p>
+                    <p className="pb-4">{value.answer_section2}</p>
+                    <p className="pb-4">{value.answer_section3}</p>
+                    <p className="pb-4">{value.answer_section4}</p>
+                    <p className="">{value.answer_section5}</p>
+
                   </DropDownBoxText>
                 ) : null}
-                </DropDownBox>
-              </>
-            );
-          })}
-        </DropDownBoxes>
+              </DropDownBox>
+            </>
+          );
+        })}
+      </DropDownBoxes>
     </IconContext.Provider>
   );
 };

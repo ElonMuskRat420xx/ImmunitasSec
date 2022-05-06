@@ -20,7 +20,7 @@ const Modal = ({ show, onClose, children, title }) => {
       <StyledModal>
         <StyledModalHeader>
           <a href="#" onClick={handleCloseClick}>
-          
+
             <AiOutlineClose size="3rem" />
 
 

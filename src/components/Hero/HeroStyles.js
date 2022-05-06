@@ -17,3 +17,19 @@ export const LeftSection = styled.div`
     margin: 0 auto;
   }
 `;
+
+
+export const BtnSeparator = styled.div`
+    display: flex;
+    justify-content: left;
+    gap: 4rem;
+
+
+@media ${(props) => props.theme.breakpoints.sm} {
+  
+  }
+  @media ${(props) => props.theme.breakpoints.md} {
+
+
+  }
+`;

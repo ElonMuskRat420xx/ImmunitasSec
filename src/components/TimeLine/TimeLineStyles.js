@@ -9,6 +9,7 @@ export const CarouselContainer = styled.ul`
   display: flex;
   justify-content: space-between; 
   /* overflow-x: hidden; */
+  overflow-x: scroll;
 
   margin-left: 32px;
   &:first-of-type{
@@ -33,7 +34,10 @@ export const CarouselContainer = styled.ul`
   }
 `
 export const CarouselMobileScrollNode = styled.div`
-  @media ${props => props.theme.breakpoints.sm} {
+display: flex;
+    min-width: ${({ final }) => final ? `120%;` : `min-content`};
+  
+    @media ${props => props.theme.breakpoints.sm} {
     display: flex;
     min-width: ${({ final }) => final ? `120%;` : `min-content`}
   }
@@ -157,3 +161,77 @@ export const SliderContainer = styled.div`
 display:flex;
 flex-direction:row;
 `
+
+
+export const HeroLeft = styled.div`
+display: flex;
+align-items: left;
+flex-direction: row;
+margin-bottom: 5rem;
+margin-top: 1rem;
+
+@media ${(props) => props.theme.breakpoints.sm} {
+  flex-direction: column;
+  margin: 0rem;
+  padding:2rem;
+}
+`
+export const HeroRight = styled.div`
+display: flex;
+align-items: left;
+flex-direction: row-reverse;
+gap: 2rem;
+margin-bottom: 1rem;
+margin-top: 1rem;
+
+@media ${(props) => props.theme.breakpoints.sm} {
+  flex-direction: column-reverse;
+  margin: 0rem;
+}
+`
+
+export const LeftSection = styled.div`
+display:flex;
+flex-direction:column;
+justify-content:flex-start;
+width: 50%;
+
+
+@media ${(props) => props.theme.breakpoints.sm} {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+@media ${(props) => props.theme.breakpoints.md} {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+`;
+
+export const RightSection = styled.div`
+display:flex;
+flex-direction:column;
+justify-content:center;
+height:60rem;
+width:100%;
+padding:0rem;
+border-radius:25px;
+transform:scale(0.9);
+
+@media ${(props) => props.theme.breakpoints.sm} {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+@media ${(props) => props.theme.breakpoints.md} {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  margin: 0 auto;
+}
+`;
