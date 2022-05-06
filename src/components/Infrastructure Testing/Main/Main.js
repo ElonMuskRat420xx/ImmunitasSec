@@ -9,7 +9,7 @@ import InfrastructurePenTestFaq from '../Faqs/Faq';
 
 import { FaCheckSquare, FaSearchPlus, FaUserLock } from "react-icons/fa";
 
-import MainHero from '../../../../public/images/RedscanHero.svg'
+import MainHero from '../../../../public/images/Img1.png'
 import ContactHero from '../../../../public/images/RedscanHero.svg'
 
 function Main() {
@@ -21,8 +21,8 @@ function Main() {
                     <Image
                         src={MainHero}
                         alt="CardImage"
-                        width="1000px"
-                        height="1000px"
+                        width="585px"
+                        height="450px"
                     />
                 </RightSection>
 

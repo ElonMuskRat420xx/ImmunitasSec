@@ -54,7 +54,7 @@ width: 50%;
 export const RightSection = styled.div`
 display:flex;
 flex-direction:column;
-justify-content:flex-start;
+justify-content:center;
 width:50%;
 padding:1rem;
 
