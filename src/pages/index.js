@@ -1,18 +1,18 @@
 import React, { useState } from "react";
-import BgAnimation from '../components/BackgroundAnimation/BackgroundAnimation';
-import Hero from '../components/Hero/Hero';
-import Technologies from '../components/Technologies/Technologies';
-import Footer from '../components/Footer/Footer'
+import BgAnimation from '../components/Home/BackgroundAnimation/BackgroundAnimation';
+import Hero from '../components/Home/TopHero/Hero';
+import Technologies from '../components/Home/Technologies/Technologies';
+import Footer from '../components/Home/Footer/Footer'
 import { Layout } from '../layout/Layout';
 import { Section } from '../styles/GlobalComponents';
 
-import ContactForm from '../components/ContactForm/ContactForm.js'
-import Modal from '../components/ContactForm/Modal'
-import { ChatButton, ContactButtonContainer } from '../components/ContactForm/ContactButton';
+import ContactForm from '../components/Home/ContactForm/ContactForm.js'
+import Modal from '../components/Home/ContactForm/Modal'
+import { ChatButton, ContactButtonContainer } from '../components/Home/ContactForm/ContactButton';
 import { SiGooglemessages } from "react-icons/si";
 
-import FooterHero from "../components/FooterHero/HomeHero/FooterHero";
-import Tabs from "../components/Services/HomepageTabs/ServiceTabs";
+import FooterHero from "../components/Home/LowerHero/FooterHero";
+import Tabs from "../components/Home/Services/ServiceTabs";
 
 
 

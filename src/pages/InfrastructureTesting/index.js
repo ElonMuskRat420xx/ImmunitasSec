@@ -1,8 +1,8 @@
 import Theme from '../../styles/theme';
 import { Layout } from '../../layout/Layout';
-import Footer from '../../components/Footer/Footer'
-import Main from '../../components/Infrastructure Testing/Main/Main';
-import TimeLine from '../../components/TimeLine/TimeLine';
+import Footer from '../../components/Home/Footer/Footer'
+import Main from '../../components/Pages/InfrastructureTesting/Main/Main';
+import TimeLine from '../../components/Home/TimeLine/TimeLine';
 
 
 export default function InfrastructureTesting({ Component, pageProps }) {

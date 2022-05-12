@@ -1,28 +1,24 @@
 import Theme from '../../styles/theme';
 import { Layout } from '../../layout/Layout';
-import Footer from '../../components/Footer/Footer'
+import Footer from '../../components/Home/Footer/Footer'
 import React from "react";
-import ContactForm from '../../components/ContactForm/ContactForm.js'
 import { Section, SectionText, SectionTitle, SectionDivider } from '../../styles/GlobalComponents';
-import styled from 'styled-components';
-import HeroGrid from '../../components/ContactForm/HeroGrid';
 
-export default function Contact ({ Component, pageProps }) {
+export default function Contact({ Component, pageProps }) {
   return (
     <>
       <Theme>
-<Layout>
+        <Layout>
 
-<Section>
-<HeroGrid/>
-</Section>
+          <Section>
+          </Section>
 
-<Footer/>
+          <Footer />
 
-</Layout>
+        </Layout>
 
 
-</Theme>
+      </Theme>
     </>
   );
 }

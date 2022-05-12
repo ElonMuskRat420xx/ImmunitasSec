@@ -1,32 +1,25 @@
 import Theme from '../../styles/theme';
 import { Layout } from '../../layout/Layout';
-import Footer from '../../components/Footer/Footer'
-import PenTest from '../../components/PenTest/PenTest';
+import Footer from '../../components/Home/Footer/Footer'
+import PenTest from '../../components/Pages/PenetrationTesting/PenTest';
 
 
-  export default function PenTesting ({ Component, pageProps }) {
-    return (
-      <>
+export default function PenTesting({ Component, pageProps }) {
+  return (
+    <>
 
-<Theme>
+      <Theme>
 
-<Layout>
+        <Layout>
 
+          <PenTest />
 
-<PenTest/>
+          <Footer />
 
+        </Layout>
 
+      </Theme>
+    </>
+  );
+}
 
-
-
-<Footer/>
-
-</Layout>
-  
-  
-</Theme>
-      </>
-    );
-  }
-  
-  

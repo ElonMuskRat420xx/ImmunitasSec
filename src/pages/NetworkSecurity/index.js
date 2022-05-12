@@ -1,41 +1,40 @@
 import Theme from '../../styles/theme';
 import { Layout } from '../../layout/Layout';
 import Footer from '../../components/Footer/Footer'
-import NetworkSec from '../../components/NetworkSec/NetworkSec';
-import MessagingSection from '../../components/ContactForm/ContactForm.js'
-import TestingApproach from '../../components/NetworkSec/Methodology'
-import NetworkSecFaq from '../../components/NetworkSec/Faq'
+import NetworkSec from '../../components/Pages/NetworkSecurity/NetworkSec';
+import MessagingSection from '../../components/Home/ContactForm/ContactForm.js'
+import TestingApproach from '../../components/Pages/NetworkSecurity/Methodology'
+import NetworkSecFaq from '../../components/Pages/NetworkSecurity/Faq'
 
-  export default function NetworkSecurity ({ Component, pageProps }) {
-    return (
-      <>
+export default function NetworkSecurity({ Component, pageProps }) {
+  return (
+    <>
 
-<Theme>
+      <Theme>
 
-<Layout>
+        <Layout>
 
-<NetworkSec>
+          <NetworkSec>
 
-<MessagingSection>
+            <MessagingSection>
 
-</MessagingSection>
+            </MessagingSection>
 
-</NetworkSec>
+          </NetworkSec>
 
-<TestingApproach/>
+          <TestingApproach />
 
-<NetworkSecFaq>
+          <NetworkSecFaq>
 
-</NetworkSecFaq>
+          </NetworkSecFaq>
 
-<Footer/>
+          <Footer />
 
-</Layout>
-  
-  
-</Theme>
-      </>
-    );
-  }
-  
-  
+        </Layout>
+
+
+      </Theme>
+    </>
+  );
+}
+

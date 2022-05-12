@@ -1,25 +1,24 @@
 import Theme from '../../styles/theme';
 import { Layout } from '../../layout/Layout';
-import PrivacyNotice from '../../components/T&CS/PrivacyNotice';
-import Footer from '../../components/Footer/Footer'
+import PrivacyNotice from '../../components/Pages/T&CS/PrivacyNotice';
+import Footer from '../../components/Home/Footer/Footer'
 
-  export default function PrivacyNotices ({ Component, pageProps }) {
-    return (
-      <>
-        <Theme>
-<Layout>
+export default function PrivacyNotices({ Component, pageProps }) {
+  return (
+    <>
+      <Theme>
+        <Layout>
 
-<PrivacyNotice/>
+          <PrivacyNotice />
 
-<Footer/>
+          <Footer />
 
-</Layout>
-  
-  
-</Theme>
-      </>
-    );
-  }
-  
-  
-  
+        </Layout>
+
+
+      </Theme>
+    </>
+  );
+}
+
+

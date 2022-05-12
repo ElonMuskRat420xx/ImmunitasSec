@@ -1,28 +1,27 @@
 import Theme from '../../styles/theme';
 import { Layout } from '../../layout/Layout';
-import AboutSection from '../../components/About/About'
-import Footer from '../../components/Footer/Footer'
+import AboutSection from '../../components/Pages/About/About'
+import Footer from '../../components/Home/Footer/Footer'
 
-  export default function About ({ Component, pageProps }) {
-    return (
-      <>
-        <Theme>
-<Layout>
+export default function About({ Component, pageProps }) {
+  return (
+    <>
+      <Theme>
+        <Layout>
 
-<AboutSection>
+          <AboutSection>
 
-</AboutSection>
+          </AboutSection>
 
 
-<Footer/>
+          <Footer />
 
-</Layout>
-  
-  
-</Theme>
-      </>
-    );
-  }
-  
-  
-  
+        </Layout>
+
+
+      </Theme>
+    </>
+  );
+}
+
+
