@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { BoxTitle, BlockFill, HeadlineTitleSection, HeadlineTextSection, HeadlineHero } from './MainStyles';
 import { Section, SectionText, SectionTitle } from '../../../../styles/GlobalComponents/index';
 
-import MainHero from '../../../../../public/images/HeadlineHeroImg.svg'
+import MainHero from '../../../../../public/images/ObjectiveTestingHeroImg.svg'
 
 function HeadLine() {
     return (
@@ -49,8 +49,6 @@ function HeadLine() {
                                     A thorough penetration test across your infrastructure
                                 </li>
                             </ul>
-
-
                         </SectionText>
                     </HeadlineTextSection>
                 </HeadlineHero>

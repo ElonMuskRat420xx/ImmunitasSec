@@ -18,10 +18,10 @@ function HeroSection() {
             <HeroRight>
                 <LeftSection>
                     <SectionSubTitle>
-                        Penetration Testing Isn't What We Do, It's All We Do
+                        Reduce The Risk Of A Breach With An Objective Based Approach
                     </SectionSubTitle>
                     <SectionText>
-                        Our penetration testing is more than just a vulnerability scan. Automated testing accounts for only 5% of what we do. The other 95% consists of manually simulated real-life attacks conducted by  Security Professionals to uncover your network vulnerabilities and protect your future.
+                        Our penetration testing is more than just a vulnerability scan. Automated testing accounts for only 5% of what we do. The other 95% consists of manually simulated real-life attacks conducted by Security Professionals to uncover your network vulnerabilities and protect your future.
                         <br />
                     </SectionText>
                 </LeftSection>
@@ -30,37 +30,37 @@ function HeroSection() {
                     <FeatureGrid>
                         <Box>
                             <BoxTitle  >
-                                Demonstrated Impact
+                                Secure Information
                             </BoxTitle>
                             <BoxText>
-                                Identify gaps in processes and procedures.
+                                Approach an objective from all angles to ensure that information remains secure.
                             </BoxText>
                         </Box>
 
                         <Box>
                             <BoxTitle>
-                                Adversary Simulation
+                                Accurate Simulation
                             </BoxTitle>
                             <BoxText>
-                                Explore your network from an attacker's perspective.
+                                We simulate the attacks launched by a malicious party, both internally and externally.
                             </BoxText>
                         </Box>
 
                         <Box>
                             <BoxTitle>
-                                Proactively Protect
+                                Detailed Report After Testing Period
                             </BoxTitle>
                             <BoxText>
-                                Find your vulnerabilities before an attacker does.
+                                Attack narratives outline how a particular objective was obtained.
                             </BoxText>
                         </Box>
 
                         <Box>
                             <BoxTitle>
-                                Assess Your System
+                                Strategic Security Recommendations
                             </BoxTitle>
                             <BoxText>
-                                Find weaknesses others overlook in your IT infrastructure.
+                                High-level assessment with recommendations to improve security posture.
                             </BoxText>
                         </Box>
                     </FeatureGrid>
@@ -77,10 +77,39 @@ function HeroSection() {
 
                 <LeftHeroSectionTable>
                     <BoxTitle>
-                        Why Your Organisation Needs A Pen Test
+                        Why Conduct Objective-Based Penetration  Testing?
                     </BoxTitle>
+                    <br />
+
                     <SectionText>
-                        With threats constantly evolving, it’s recommended that every organisation commissions penetration testing at least once a year, but more frequently when:
+                        <BoxTitle>
+                            Coverage Based Approach
+                        </BoxTitle>
+                        <ul>
+                            <li className='list-none'   >
+                                - Test user awareness and your last line of defence.
+                            </li>
+                            <li className='list-none'>
+                                - Identify threats to a single compromised password or internal end-point.
+                            </li>
+                            <li className='list-none'>
+                                - Test end-point anti-malware capability against ransomware propagation techniques.
+                            </li>
+                        </ul>
+                        <BoxTitle>
+                            Attack Narrative
+                        </BoxTitle>
+                        Each objective is thoroughly documented with an attack narrative to illustrate how it was achieved with a timeline of events.
+                        <BoxTitle>
+                            Tactical recommendations
+                        </BoxTitle>
+                        <li className='list-none'>
+                            - Thorough pentest combined with adversary simulation goals
+                        </li>
+                        <li className='list-none'>
+                            - Set specific goals you would like the ethical hacker to target within your environment (including people)
+                        </li>
+
                     </SectionText>
                 </LeftHeroSectionTable>
             </HeroRight>
