@@ -1,7 +1,7 @@
 import Theme from '../../styles/theme';
 import { Layout } from '../../layout/Layout';
 import Footer from '../../components/Home/Footer/Footer'
-import Main from '../../components/Pages/ObjectiveTesting/Main/Main';
+import Main from '../../components/Pages/Main/ObjectiveTesting/Main/Main';
 import TimeLine from '../../components/Home/TimeLine/TimeLine';
 
 
